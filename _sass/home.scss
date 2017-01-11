@@ -44,7 +44,7 @@
 
   .section-top {
     background: no-repeat $hp-pink-1 fixed;
-    background-image: url('/img/floral-home.svg');
+    background-image: url('../img/floral-home.svg');
     background-position: 57.5% calc(20% + 30px);
     background-size: 85%;
     overflow: visible;
@@ -126,7 +126,7 @@
 
 
   .section-about {
-    background: url('/img/floral-about.png') no-repeat $hp-pink-2;
+    background: url('../img/floral-about.png') no-repeat $hp-pink-2;
     background-attachment: scroll;
     background-position: center 3.125rem;
     background-size: 75%;
@@ -175,7 +175,7 @@
   }
 
   .section-faq {
-    background: url('/img/floral-faq.svg') no-repeat, $hp-periwinkle-2;
+    background: url('../img/floral-faq.svg') no-repeat, $hp-periwinkle-2;
     background-attachment: scroll, scroll;
     background-position: center 3.125rem, 0;
     background-size: 75%, auto;
@@ -183,7 +183,7 @@
 
     @include breakpoint(medium) {
       background-attachment: fixed, scroll;
-      background-image: url('/img/floral-faq.svg'), linear-gradient(to right, $hp-periwinkle-1 0%, $hp-periwinkle-1 49.5%, $hp-periwinkle-2 50%, $hp-periwinkle-1 100%);
+      background-image: url('../img/floral-faq.svg'), linear-gradient(to right, $hp-periwinkle-1 0%, $hp-periwinkle-1 49.5%, $hp-periwinkle-2 50%, $hp-periwinkle-1 100%);
       background-position: 50% calc(50% + #{$topbar-height}), 0;
       background-size: 50%, auto;
       padding-top: 3.5em;
