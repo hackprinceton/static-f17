@@ -34,4 +34,11 @@ $(document).ready(() => {
   if (window.location.hash[0] === '#') {
     scrollToHash(window.location.hash);
   }
+
+  // Read login status cookie, and show buttons if logged in
+  var userId = Cookies.get('meteor_user_id');
+  if (userId !== 'null') {
+    $('.js-show-if-logged-out').addClass('hide');
+    $('.js-show-if-logged-in').removeClass('hide');
+  }
 });
