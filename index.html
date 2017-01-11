@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HackPrinceton Fall 2016 | Nov 11-13, 2016</title>
-    <link rel="icon" href="/img/logo.png">
+    <link rel="icon" href="img/logo.png">
 
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/motion-ui/1.1.1/motion-ui.min.css" />
@@ -58,7 +58,7 @@
     <div class="main-wrapper">
         <nav class="fixed-top full-width">
             <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
-                <a href="/"><img src="/img/logo.png"></a>
+                <a href="#home"><img src="img/logo.png"></a>
                 <div class="float-right">
                     <div class="title-bar-title" data-toggle>Menu</div>
                     <button class="menu-icon" type="button" data-toggle></button>
@@ -68,15 +68,15 @@
             <div id="main-menu" class="top-bar">
                 <div class="row columns">
                     <div class="top-bar-title show-for-medium">
-                        <a href="/"><img src="/img/logo.png"></a>
+                        <a href="/"><img src="img/logo.png"></a>
                     </div>
 
                     <div class="top-bar-left">
                         <ul class="vertical medium-horizontal menu">
-                            <li><a href="/#home">Home</a></li>
-                            <li><a href="/#about">About</a></li>
-                            <li><a href="/#faq">FAQ</a></li>
-                            <li><a href="/#partners">Partners</a></li>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#faq">FAQ</a></li>
+                            <li><a href="#partners">Partners</a></li>
                         </ul>
                     </div>
 
@@ -166,14 +166,14 @@
                             {% assign tier = site.data.tiers[tier_name] %}
                                 <div class="sponsors-{{tier_name}} sponsor-tier">
                                     {% for sponsor in tier %}
-                                        <a href="{{sponsor.Website}}" target="_blank"><img src="/img/sponsors/{{sponsor.Logo}}" alt="{{sponsor.Sponsor}}" /></a>
+                                        <a href="{{sponsor.Website}}" target="_blank"><img src="img/sponsors/{{sponsor.Logo}}" alt="{{sponsor.Sponsor}}" /></a>
                                     {% endfor %}
                                 </div>
                             {% endfor %}
                             <div class="sponsors-partners-text">Special thanks to:</div>
                             <div class="sponsors-partners sponsor-tier">
                                 {% for sponsor in site.data.partners %}
-                                    <a href="{{sponsor.Website}}" target="_blank"><img src="/img/sponsors/{{sponsor.Logo}}" alt="{{sponsor.Sponsor}}" /></a>
+                                    <a href="{{sponsor.Website}}" target="_blank"><img src="img/sponsors/{{sponsor.Logo}}" alt="{{sponsor.Sponsor}}" /></a>
                                 {% endfor %}
                             </div>
                         </div>
