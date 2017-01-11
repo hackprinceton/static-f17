@@ -36,8 +36,8 @@ $(document).ready(() => {
   }
 
   // Read login status cookie, and show buttons if logged in
-  var userId = Cookies.get('meteor_user_id');
-  if (userId !== 'null') {
+  var userId = Cookies.get('meteor_is_logged_in');
+  if (userId === 'true') {
     $('.js-show-if-logged-out').addClass('hide');
     $('.js-show-if-logged-in').removeClass('hide');
   }
