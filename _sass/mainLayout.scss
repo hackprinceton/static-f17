@@ -1,0 +1,101 @@
+@import 'base';
+
+// force element have the correct top bar height
+@mixin topbar-height {
+  line-height: $topbar-height;
+  padding-bottom: 0;
+  padding-top: 0;
+}
+
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  .title-bar {
+    @include topbar-height;
+    background-color: $white;
+
+    img {
+      height: 30px;
+    }
+  }
+
+  .top-bar {
+    padding-bottom: 0;
+    padding-top: 0;
+
+    img {
+      height: 30px;
+    }
+
+    .top-bar-title {
+      @include topbar-height;
+    }
+
+    ul {
+      li {
+        @include animate-fade(background-color);
+
+        > a {
+          @include font-heading;
+          @include topbar-height;
+          color: $black;
+          font-size: rem-calc(13); // Use a smaller font for the top bar links
+        }
+
+        &:hover {
+          background-color: $hp-dark-gray;
+
+          > a {
+            color: $hp-light-gray;
+          }
+        }
+      }
+    }
+  }
+
+  .main-content {
+    margin-top: $topbar-height;
+    flex-grow: 1;
+  }
+}
+
+.footer {
+  background-color: $hp-dark-gray;
+  color: $white;
+  padding: 30px 0;
+  text-align: center;
+  width: 100%;
+
+  .footer-text {
+    @include font-subheading;
+    line-height: 1.8;
+
+    a {
+      color: $hp-pink-3;
+    }
+
+    &-fade {
+      color: $hp-light-gray;
+      font-size: .6rem;
+
+      @include breakpoint(medium) {
+        font-size: .8rem;
+      }
+    }
+  }
+
+  .footer-link {
+    font-size: 1.2rem;
+
+    &:not(:last-child) {
+      margin-right: 0.6rem;
+    }
+
+    @include breakpoint(medium) {
+      font-size: 1.5rem;
+    }
+  }
+
+}

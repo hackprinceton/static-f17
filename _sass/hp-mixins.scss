@@ -1,0 +1,60 @@
+@import 'settings';
+
+@mixin font-heading {
+  font-family: $header-font-family;
+  letter-spacing: .1em;
+}
+
+@mixin font-subheading {
+  font-family: $header-font-family;
+  letter-spacing: .15em;
+}
+
+@mixin font-body {
+  font-family: $body-font-family;
+}
+
+@mixin full-height {
+  min-height: calc(100vh - #{$topbar-height});
+}
+
+@mixin hover-color($property, $color) {
+  #{$property}: $color;
+  transition: $property 200ms ease-out;
+
+  &:hover,
+  &:focus,
+  &.disabled,
+  &[disabled] {
+    #{$property}: scale-color($color, $lightness: -20%);
+  }
+}
+
+@mixin animate-fade($property) {
+  transition: $property 0.25s ease-out;
+}
+
+@mixin floating-panel {
+  background-color: $white;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+  overflow-x: auto;
+  position: fixed;
+  white-space: nowrap;
+  z-index: 1001;
+}
+
+@mixin style-placeholder {
+  // http://css-tricks.com/snippets/css/style-placeholder-text/
+  &::-webkit-input-placeholder {
+    @content;
+  }
+  &:-moz-placeholder {
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &:-ms-input-placeholder {
+    @content;
+  }
+}

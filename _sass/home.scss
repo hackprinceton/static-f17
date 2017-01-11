@@ -1,0 +1,354 @@
+@import 'base';
+
+.template-home {
+  background-color: $hp-pink-1;
+  position: relative;
+
+  #mlh-trust-badge {
+    display: block;
+    max-width: 65px;
+    min-width: 50px;
+    position: absolute;
+    right: 20px;
+    top: 0;
+    width: 10%;
+    @include breakpoint(medium) {
+      right: 30px;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  section {
+    padding-bottom: 3.5em;
+    padding-top: 3.5em;
+
+    .title {
+      font-size: 1.5em;
+      text-align: center;
+
+      @include breakpoint(medium) {
+        font-size: 2.5em;
+        text-align: left;
+      }
+    }
+
+    p {
+      @include breakpoint(small only) {
+        text-align: justify;
+      }
+    }
+  }
+
+  .section-top {
+    background: no-repeat $hp-pink-1 fixed;
+    background-image: url('/img/floral-home.svg');
+    background-position: 57.5% calc(20% + 30px);
+    background-size: 85%;
+    overflow: visible;
+    padding-top: 0;
+
+    @include breakpoint(medium) {
+      background-position: center;
+      background-size: 45vw;
+      overflow-x: auto;
+      overflow-y: hidden;
+    }
+
+    .inner {
+      @include full-height;
+
+      height: 550px;
+      position: relative;
+    }
+
+    .main-text {
+      bottom: 2rem;
+      color: $hp-dark-gray;
+      position: absolute;
+      text-align: center;
+      width: calc(100% - 1.25rem);
+
+      @include breakpoint(medium) {
+        @include vertical-center;
+        text-align: right;
+      }
+
+      .title {
+        font-family: $header-font-family;
+        font-size: 2.5rem;
+        line-height: .5;
+        text-align: center;
+
+        @include breakpoint(medium) {
+          font-size: rem-calc(90);
+          text-align: right;
+        }
+      }
+
+      .subtext {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+
+        @include breakpoint(medium) {
+          font-size: rem-calc(40);
+        }
+
+        .date {
+          margin-bottom: 0;
+        }
+
+        .info {
+          font-size: 1.25rem;
+          margin-top: 0;
+        }
+      }
+
+      .app-message-mobile {
+        @include hide-for(medium);
+      }
+
+      .app-message-desktop {
+        @include show-for(medium);
+      }
+
+      .followthrough {
+        margin-top: 5em;
+
+        @include breakpoint(medium) {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+
+
+  .section-about {
+    background: url('/img/floral-about.png') no-repeat $hp-pink-2;
+    background-attachment: scroll;
+    background-position: center 3.125rem;
+    background-size: 75%;
+    padding-top: calc(75% + 3rem);
+
+    @include breakpoint(medium) {
+      background-attachment: fixed;
+      background-position: 50% calc(50% + #{$topbar-height});
+      background-size: 80%;
+      padding-top: 0;
+    }
+
+    .inner {
+      padding-bottom: rem-calc(30);
+      padding-top: rem-calc(30);
+      position: relative;
+
+      @include breakpoint(medium) {
+        @include full-height;
+        height: 35em; // approx height of About section
+      }
+    }
+
+    .title-outer {
+      margin-bottom: 2em;
+
+      @include breakpoint(medium) {
+        height: 100%;
+        margin-bottom: 0;
+      }
+    }
+
+    .title {
+      @include breakpoint(medium) {
+        margin-top: 10vh;
+      }
+    }
+
+    .text {
+      line-height: 1.25;
+
+      @include breakpoint(medium) {
+        @include vertical-center;
+      }
+    }
+  }
+
+  .section-faq {
+    background: url('/img/floral-faq.svg') no-repeat, $hp-periwinkle-2;
+    background-attachment: scroll, scroll;
+    background-position: center 3.125rem, 0;
+    background-size: 75%, auto;
+    padding-top: calc(75% + 3rem);
+
+    @include breakpoint(medium) {
+      background-attachment: fixed, scroll;
+      background-image: url('/img/floral-faq.svg'), linear-gradient(to right, $hp-periwinkle-1 0%, $hp-periwinkle-1 49.5%, $hp-periwinkle-2 50%, $hp-periwinkle-1 100%);
+      background-position: 50% calc(50% + #{$topbar-height}), 0;
+      background-size: 50%, auto;
+      padding-top: 3.5em;
+    }
+
+    a {
+      color: $hp-pink-2;
+
+      &:hover {
+        color: scale-color($hp-pink-2, $lightness: -14%);
+      }
+    }
+
+    .title {
+      margin-bottom: 2em;
+
+      @include breakpoint(medium) {
+        margin-bottom: 1em;
+      }
+    }
+
+    .faq-wrap {
+      @include breakpoint(medium) {
+        margin-left: -20px;
+        margin-right: -20px;
+      }
+    }
+
+    .faq,
+    .faq-sizer {
+      box-sizing: border-box;
+      padding: 0;
+      width: auto;
+
+      @include breakpoint(medium) {
+        padding: 0 20px;
+        width: 50%;
+      }
+
+      a {
+        color: $hp-dark-gray;
+      }
+
+      .faq-title {
+        font-size: 1.25rem;
+
+        & > a {
+          color: $black;
+          cursor: text;
+        }
+      }
+
+      @include breakpoint(small only) {
+        & > p {
+          max-height: 0;
+          overflow-y: hidden;
+          transition: height .2s ease-out;
+        }
+
+        &.expanded > p {
+          max-height: 500vh;
+        }
+
+        .faq-title {
+          & > a {
+            cursor: pointer;
+
+            &::after {
+              content: '〉';
+              display: inline-block;
+              font-size: .75rem;
+              margin-left: .75em;
+              position: relative;
+              top: -.125em;
+              transition: transform 0.2s ease-out;
+            }
+          }
+        }
+
+        &.expanded .faq-title {
+          & > a {
+            &::after {
+              transform: rotate(.25turn);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .section-sponsors {
+    background-color: $white;
+    text-align: center;
+
+    .title {
+      text-align: center;
+    }
+    
+    p {
+      text-align: center;
+    }
+
+    .description {
+      margin-bottom: 3.5em;
+    }
+
+    .sponsors-partners-text {
+      font-size: 2em;
+      margin-bottom: 1rem;
+      margin-top: 2rem;
+    }
+
+    .sponsors {
+      background-color: $white;
+      box-sizing: border-box;
+      margin: 0 auto;
+      padding-bottom: .5em;
+      padding-top: .5em;
+
+      a {
+        box-sizing: content-box;
+        display: inline-block;
+        padding: 30px;
+        vertical-align: middle;
+        width: 70%;
+
+        @include breakpoint(large) {
+          padding: rem-calc(40);
+        }
+
+        img {
+          border: 0;
+          display: block;
+          width: 100%;
+        }
+      }
+
+      .sponsor-tier:not(:last-child) {
+        border-bottom: 1px solid $hp-pink-1;
+      }
+
+      .sponsors-title > a {
+        max-width: 320px;
+      }
+
+      .sponsors-platinum > a {
+        max-width: 340px;
+      }
+
+      .sponsors-gold > a {
+        max-width: 230px;
+      }
+
+      .sponsors-silver > a {
+        max-width: 160px;
+      }
+
+      .sponsors-bronze > a {
+        max-width: 100px;
+      }
+
+      .sponsors-partners > a {
+        max-width: 100px;
+        padding: 25px;
+      }
+    }
+  }
+}

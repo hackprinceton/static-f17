@@ -1,0 +1,23 @@
+- id: 1
+  question: What is a hackathon?
+  answer: A hackathon is a marathon software and hardware product creation event. At HackPrinceton, you can look forward to amazing guest speakers, helpful workshops, tons of skilled mentors, and, of course, fun games and great food.
+
+- id: 2
+  question: Who can attend?
+  answer: Any undergraduate or graduate student at any university in the world!
+
+- id: 3
+  question: What should I bring?
+  answer: Bring your student ID for entrance, and a government-issued ID to borrow hardware from our electrical engineering lab. You’ll also need your laptop and charger for hacking, and toiletries for hygiene.
+
+- id: 4
+  question: I’ve never been to a hackathon and I’m nervous.
+  answer: Have no fear &mdash; HackPrinceton is, first and foremost, a <i>fun</i> learning experience! We will have beginner workshops held by professors and industry professionals in web design, mobile applications, backends, cloud content management, and more! Our goal is for you to leave HackPrinceton having <i>learned</i> something.
+
+- id: 5
+  question: Will this cost me money?
+  answer: Nope! We’ll provide all the food, swag, and fun times you need to have an amazing weekend.
+
+- id: 6
+  question: I still have more questions!
+  answer: Email us anytime at <a href="mailto:team@hackprinceton.com">team@hackprinceton.com</a>.
