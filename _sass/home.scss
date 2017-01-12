@@ -43,7 +43,7 @@
   }
 
   .section-top {
-    background: no-repeat $hp-pink-1 fixed;
+    background: no-repeat $hp-pink-1;
     background-image: url('../img/floral-home.svg');
     background-position: 57.5% calc(20% + 30px);
     background-size: 85%;
@@ -52,6 +52,7 @@
     padding-bottom: 0;
 
     @include breakpoint(medium) {
+      background-attachment: fixed;
       background-position: center;
       background-size: 45vw;
       overflow-x: auto;
