@@ -49,6 +49,7 @@
     background-size: 85%;
     overflow: visible;
     padding-top: 0;
+    padding-bottom: 0;
 
     @include breakpoint(medium) {
       background-position: center;
