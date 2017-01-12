@@ -157,9 +157,9 @@
                             <div class="faq-wrap">
                                 <div class="faq-sizer"></div>
                                 {% for faq in site.data.faq %}
-                                    <div class="faq" id="faq-text-{{faq.id}}" data-toggler=".expanded">
+                                    <div class="faq" id="faq-text-{{forloop.index}}" data-toggler=".expanded">
                                         <h2 class="faq-title">
-                                            <a data-toggle="faq-text-{{faq.id}}">{{faq.question}}</a>
+                                            <a data-toggle="faq-text-{{forloop.index}}">{{faq.question}}</a>
                                         </h2>
                                         <p>{{faq.answer}}</p>
                                     </div>
