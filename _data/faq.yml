@@ -19,5 +19,31 @@
   answer: Nope! We’ll provide all the food, swag, and fun times you need to have an amazing weekend.
 
 - id: 6
+  question: Will I be able to borrow hardware for my project?
+  answer: |
+    Yes! We have one of the most well established hardware tracks in the country and our dedicated hardware lab will be stocked with parts and tools to build your project. Some items we've previously provided include:
+    <ul>
+    <li>Raspberry Pis + kits + touchscreens</li>
+    <li>Arduinos + kits</li>
+    <li>Oculus Rifts</li>
+    <li>Sparkcore</li>
+    <li>Myo Bands</li>
+    <li>Pebble Smartwatch</li>
+    <li>Servos, Motors and Gears</li>
+    <li>Soldering irons</li>
+    <li>Wire cutters, strippers, pliers</li>
+    <li>Laser cutter + acrylic</li>
+    <li>...and more!</li>
+    </ul>
+
+- id: 7
+  question: How will I get to Princeton?
+  answer: We'll be sending a number of buses to some schools, which will provide you with transportation to and from HackPrinceton. If we don't have a bus going to your school, we'll be providing travel reimbursements to many participants in order to help subsidize the costs of travel. You'll receive more details about your particular travel arrangement on your confirmation page.
+
+- id: 8
+  question: What's the event schedule?
+  answer: HackPrinceton will start around 5pm on Friday, March 31th and last until around 3pm on Sunday, April 2nd. We'll be releasing more details about the schedule in the coming weeks.
+
+- id: 9
   question: I still have more questions!
   answer: Email us anytime at <a href="mailto:team@hackprinceton.com">team@hackprinceton.com</a>.
