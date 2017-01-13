@@ -5,19 +5,19 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{site.title}}</title>
+    <title>{{ site.title }}</title>
     <link rel="icon" href="img/logo.png">
 
     <link rel="stylesheet" href="css/style.css" />
 
     <meta property="og:url" content="https://hackprinceton.com/">
-    <meta property="og:title" content="{{site.title}}">
-    <meta property="og:description" content="{{site.description}}">
+    <meta property="og:title" content="{{ site.title }}">
+    <meta property="og:description" content="{{ site.description }}">
     <meta property="og:image" content="https://hackprinceton.com/img/cover.png">
 
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="{{site.title}}">
-    <meta name="twitter:description" content="{{site.description}}">
+    <meta name="twitter:title" content="{{ site.title }}">
+    <meta name="twitter:description" content="{{ site.description }}">
     <meta name="twitter:image" content="https://hackprinceton.com/img/cover.png">
 
     <!-- Fonts -->
@@ -25,7 +25,7 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
     <!-- Twitter Widgets -->
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs); }}(document,"script","twitter-wjs");</script>
 
     <!-- Facebook Pixel Code -->
     <script>
@@ -158,11 +158,11 @@
                             <div class="faq-wrap">
                                 <div class="faq-sizer"></div>
                                 {% for faq in site.data.faq %}
-                                    <div class="faq" id="faq-text-{{forloop.index}}" data-toggler=".expanded">
+                                    <div class="faq" id="faq-text-{{ forloop.index }}" data-toggler=".expanded">
                                         <h2 class="faq-title">
-                                            <a data-toggle="faq-text-{{forloop.index}}">{{faq.question}}</a>
+                                            <a data-toggle="faq-text-{{ forloop.index }}">{{ faq.question }}</a>
                                         </h2>
-                                        <p>{{faq.answer}}</p>
+                                        <p>{{ faq.answer }}</p>
                                     </div>
                                 {% endfor %}
                             </div>
@@ -184,16 +184,16 @@
                             {% for tier_hash in site.data.tiersorder %}
                             {% assign tier_name = tier_hash["tier"] %}
                             {% assign tier = site.data.tiers[tier_name] %}
-                                <div class="sponsors-{{tier_name}} sponsor-tier">
+                                <div class="sponsors-{{ tier_name }} sponsor-tier">
                                     {% for sponsor in tier %}
-                                        <a href="{{sponsor.Website}}" target="_blank"><img src="img/sponsors/{{sponsor.Logo}}" alt="{{sponsor.Sponsor}}" /></a>
+                                        <a href="{{ sponsor.Website }}" target="_blank"><img src="img/sponsors/{{ sponsor.Logo }}" alt="{{ sponsor.Sponsor }}" /></a>
                                     {% endfor %}
                                 </div>
                             {% endfor %}
                             <div class="sponsors-partners-text">Special thanks to:</div>
                             <div class="sponsors-partners sponsor-tier">
                                 {% for sponsor in site.data.partners %}
-                                    <a href="{{sponsor.Website}}" target="_blank"><img src="img/sponsors/{{sponsor.Logo}}" alt="{{sponsor.Sponsor}}" /></a>
+                                    <a href="{{ sponsor.Website }}" target="_blank"><img src="img/sponsors/{{ sponsor.Logo }}" alt="{{ sponsor.Sponsor }}" /></a>
                                 {% endfor %}
                             </div>
                         </div>
