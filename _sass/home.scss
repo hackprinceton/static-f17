@@ -238,14 +238,23 @@
         }
       }
 
+      .faq__content {
+        margin-bottom: 1rem;
+        line-height: 1.6;
+
+        ul {
+          margin-top: 1rem;
+        }
+      }
+
       @include breakpoint(small only) {
-        & > p {
+        .faq__content {
           max-height: 0;
           overflow-y: hidden;
           transition: height .2s ease-out;
         }
 
-        &.expanded > p {
+        &.expanded .faq__content {
           max-height: 500vh;
         }
 
