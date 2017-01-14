@@ -8,7 +8,9 @@
     <title>{{ site.title }}</title>
     <link rel="icon" href="img/logo.png">
 
-    <link rel="stylesheet" href="css/style.css" />
+    <!-- Styles, with cachebusting. -->
+    <!-- https://toddmotto.com/cache-busting-jekyll-github-pages -->
+    <link rel="stylesheet" href="{{ "css/style.css" | prepend: site.baseurl }}?{{site.time | date: '%s%N'}}" />
 
     <meta property="og:url" content="https://hackprinceton.com/">
     <meta property="og:title" content="{{ site.title }}">
@@ -52,23 +54,13 @@
 
     ga('create', 'UA-44449737-1', 'auto');
     ga('send', 'pageview');
-
     </script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.0/js/foundation.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.1.1/masonry.pkgd.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.3/js.cookie.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
-
-    <script src="js/main.js"></script>
 </head>
 <body>
     <div class="main-wrapper">
         <nav class="fixed-top full-width">
             <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="medium">
-                <a href="#home"><img src="img/logo.png"></a>
+                <a href="#home"><img src="{{ "img/logo.png" | prepend: site.baseurl }}?{{site.time | date: '%s%N'}}"></a>
                 <div class="float-right">
                     <div class="title-bar-title" data-toggle>Menu</div>
                     <button class="menu-icon" type="button" data-toggle></button>
@@ -186,14 +178,18 @@
                             {% assign tier = site.data.tiers[tier_name] %}
                                 <div class="sponsors-{{ tier_name }} sponsor-tier">
                                     {% for sponsor in tier %}
-                                        <a href="{{ sponsor.Website }}" target="_blank"><img src="img/sponsors/{{ sponsor.Logo }}" alt="{{ sponsor.Sponsor }}" /></a>
+                                        <a href="{{ sponsor.Website }}" target="_blank">
+                                            <img src="{{ "img/sponsors" | prepend: site.baseurl }}/{{ sponsor.Logo }}" alt="{{ sponsor.Sponsor }}" />
+                                        </a>
                                     {% endfor %}
                                 </div>
                             {% endfor %}
                             <div class="sponsors-partners-text">Special thanks to:</div>
                             <div class="sponsors-partners sponsor-tier">
                                 {% for sponsor in site.data.partners %}
-                                    <a href="{{ sponsor.Website }}" target="_blank"><img src="img/sponsors/{{ sponsor.Logo }}" alt="{{ sponsor.Sponsor }}" /></a>
+                                    <a href="{{ sponsor.Website }}" target="_blank">
+                                        <img src="{{ "img/sponsors" | prepend: site.baseurl }}/{{ sponsor.Logo }}" alt="{{ sponsor.Sponsor }}" />
+                                    </a>
                                 {% endfor %}
                             </div>
                         </div>
@@ -224,5 +220,14 @@
             </div>
         </footer>
     </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.0/js/foundation.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.1.1/masonry.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.3/js.cookie.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <script src="{{ "js/main.js" | prepend: site.baseurl }}?{{site.time | date: '%s%N'}}"></script>
 </body>
 </html>
