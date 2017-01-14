@@ -8,6 +8,22 @@
   padding-top: 0;
 }
 
+// Prevent FOUC of top bar while loading
+// http://foundation.zurb.com/sites/docs/responsive-navigation.html
+.no-js {
+  @include breakpoint(small only) {
+    .top-bar {
+      display: none;
+    }
+  }
+
+  @include breakpoint(medium) {
+    .title-bar {
+      display: none;
+    }
+  }
+}
+
 .main-wrapper {
   display: flex;
   flex-direction: column;
