@@ -1,5 +1,10 @@
 ---
 ---
-@import "application";
-@import "mainLayout";
-@import "home";
+// Include Foundation framework
+@import 'foundation/foundation';
+@include foundation-everything;
+
+// Include custom styles
+@import 'application';
+@import 'mainLayout';
+@import 'home';
