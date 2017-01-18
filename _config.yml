@@ -1,3 +1,6 @@
 title: HackPrinceton Spring 2017 | Mar 31-Apr 2, 2017
 description: Princeton University's 36-hour student hackathon. Learn, build, and explore software and hardware with 500 fellow students this March 31st-April 2nd.
 baseurl:
+incremental: true
+gems:
+  - jekyll-redirect-from
