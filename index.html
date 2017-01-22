@@ -179,7 +179,7 @@
                                 <div class="sponsors-{{ tier_name }} sponsor-tier">
                                     {% for sponsor in tier %}
                                         <a href="{{ sponsor.Website }}" target="_blank">
-                                            <img src="{{ "img/sponsors" | prepend: site.baseurl }}/{{ sponsor.Logo }}" alt="{{ sponsor.Sponsor }}" />
+                                            <img src="{{ "img/sponsor-loading.gif" | prepend: site.baseurl }}" data-src="{{ "img/sponsors" | prepend: site.baseurl }}/{{ sponsor.Logo }}" alt="{{ sponsor.Sponsor }}" />
                                         </a>
                                     {% endfor %}
                                 </div>
@@ -188,7 +188,7 @@
                             <div class="sponsors-partners sponsor-tier">
                                 {% for sponsor in site.data.partners %}
                                     <a href="{{ sponsor.Website }}" target="_blank">
-                                        <img src="{{ "img/sponsors" | prepend: site.baseurl }}/{{ sponsor.Logo }}" alt="{{ sponsor.Sponsor }}" />
+                                        <img src="{{ "img/sponsor-loading.gif" | prepend: site.baseurl }}" data-src="{{ "img/sponsors" | prepend: site.baseurl }}/{{ sponsor.Logo }}" alt="{{ sponsor.Sponsor }}" />
                                     </a>
                                 {% endfor %}
                             </div>

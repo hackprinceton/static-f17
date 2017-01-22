@@ -42,3 +42,11 @@ $(document).ready(() => {
     $('.js-show-if-logged-in').removeClass('hide');
   }
 });
+
+window.onload = function () {
+  $('img[data-src]').each(function () {
+    $(this).attr('src', $(this).attr('data-src')).on('load', function () {
+      $(this).addClass('loaded');
+    });
+  });
+}
