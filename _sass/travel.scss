@@ -1,0 +1,24 @@
+@import 'hp-styles/settings';
+@import 'hp-styles/mixins';
+
+.template-travel {
+  background-color: $hp-pink-1;
+  padding-bottom: 2em;
+  padding-top: 2em;
+
+  .google-maps {
+    height: 0;
+    overflow: hidden;
+    margin-bottom: 1em;
+    padding-bottom: 40%; // This is the aspect ratio
+    position: relative;
+
+    iframe {
+      height: 100% !important;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100% !important;
+    }
+  }
+}
