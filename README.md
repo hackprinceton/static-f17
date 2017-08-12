@@ -8,6 +8,7 @@ This repo uses Jekyll as its static site engine. Install Jekyll and the necessar
 
 ```
 git submodule init
+git submodule update
 gem install bundler
 bundle install
 ```
