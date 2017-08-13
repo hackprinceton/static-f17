@@ -1,4 +1,4 @@
-# hp-static-s17
+# static
 
 Static homepage content for HackPrinceton Spring 2017. GitHub Pages is configured to deploy this site out of the `master` branch.
 
