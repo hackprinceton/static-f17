@@ -7,8 +7,7 @@ Static homepage content for HackPrinceton Spring 2017. GitHub Pages is configure
 This repo uses Jekyll as its static site engine. Install Jekyll and the necessary plugins, as well as stylesheet dependencies, by running the following commands:
 
 ```
-git submodule init
-git submodule update
+git submodule update --init --recursive
 gem install bundler
 bundle install
 ```
@@ -23,7 +22,7 @@ bundle exec jekyll serve
 
 This will start a development server at `localhost:4000`. It will automatically reload when you save changes, unless you modify `_config.yml`, in which case you must manually restart the server. In some cases, you may also need to restart the server after modifying data files in `_data`.
 
-All Sass files are compiled automatically, so you do not need to manually compile them into CSS. To add any new Sass files to the build, save it into the `_sass` directory and append an `@import` entry to `css/style.scss`. Shared styles are imported via a Git submodule from the [hp-styles](https://github.com/princetoneclub/hp-styles) repo.
+All Sass files are compiled automatically, so you do not need to manually compile them into CSS. To add any new Sass files to the build, save it into the `_sass` directory and append an `@import` entry to `css/style.scss`. Shared styles are imported via a Git submodule from the [styles](https://github.com/hackprinceton/styles) repo.
 
 ## License
 
