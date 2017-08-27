@@ -290,12 +290,9 @@
     background-color: $white;
     text-align: center;
 
-    .title {
-      text-align: center;
-    }
-
-    p {
-      text-align: center;
+    .title,
+    .potential-followthrough {
+      text-align: left;
     }
 
     .description {
