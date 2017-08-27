@@ -26,8 +26,8 @@
     padding-top: 3.5em;
 
     .title {
-      font-size: 1.5em;
-      text-align: center;
+      color: $hp-brown-2;
+      font-size: 2em;
 
       @include breakpoint(medium) {
         font-size: 2.5em;
@@ -43,10 +43,10 @@
   }
 
   .section-top {
-    background-image: url('../img/floral-home.svg');
-    background-position: 57.5% calc(20% + 30px);
+    background-image: url('../img/tree-mobile.svg');
+    background-position: 0 calc(15% + #{$topbar-height});
     background-repeat: no-repeat;
-    background-size: 85%;
+    background-size: 95%;
     overflow: visible;
     padding-top: 0;
     padding-bottom: 0;
@@ -62,15 +62,15 @@
     .inner {
       @include full-height;
 
-      height: 550px;
+      // minimum height of the section
+      height: 130vw;
       position: relative;
     }
 
     .main-text {
-      bottom: 2rem;
       color: $hp-brown-1;
       position: absolute;
-      text-align: center;
+      top: 60%;
       width: calc(100% - 1.25rem);
 
       @include breakpoint(medium) {
@@ -79,10 +79,12 @@
       }
 
       .title {
+        color: $hp-orange-1;
         font-family: $header-font-family;
-        font-size: 2.5rem;
-        line-height: .5;
-        text-align: center;
+        font-size: 16vw;
+        line-height: 1;
+        margin-bottom: 0;
+
 
         @include breakpoint(medium) {
           font-size: rem-calc(90);
@@ -91,7 +93,6 @@
       }
 
       .subtext {
-        font-size: 1rem;
         margin-bottom: 1rem;
 
         @include breakpoint(medium) {
@@ -99,6 +100,7 @@
         }
 
         .date {
+          font-size: 6.5vw;
           margin-bottom: 0;
         }
 
@@ -117,7 +119,7 @@
       }
 
       .followthrough {
-        margin-top: 5em;
+        margin-top: 2em;
 
         @include breakpoint(medium) {
           margin-top: 0;
