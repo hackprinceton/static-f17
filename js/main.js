@@ -1,11 +1,7 @@
 function scrollToHash(hash) {
-  const offsetTop = -$('.top-bar').height();
   $(window).stop(true).scrollTo(hash, {
-    duration: 500,
+    duration: 400,
     interrupt: true,
-    offset: {
-      top: offsetTop,
-    },
   });
 }
 
