@@ -178,12 +178,11 @@
   }
 
   .section-faq {
-    background-image: url('../img/floral-faq.svg');
-    background-attachment: scroll, scroll;
-    background-position: center 3.125rem, 0;
+    background-image: url('../img/tree-2-mobile.svg');
+    background-attachment: scroll;
+    background-position: 0 35vw;
     background-repeat: no-repeat;
-    background-size: 75%, auto;
-    padding-top: calc(75% + 3rem);
+    background-size: 95%;
 
     @include breakpoint(medium) {
       background-attachment: fixed, scroll;
@@ -208,6 +207,8 @@
     }
 
     .faq-wrap {
+      margin-top: 35vw;
+
       @include breakpoint(medium) {
         margin-left: -20px;
         margin-right: -20px;
