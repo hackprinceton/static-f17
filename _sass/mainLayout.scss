@@ -8,6 +8,10 @@
   padding-top: 0;
 }
 
+p {
+  letter-spacing: 0.02em;
+}
+
 // Prevent FOUC of top bar while loading
 // http://foundation.zurb.com/sites/docs/responsive-navigation.html
 .no-js {
