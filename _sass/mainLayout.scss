@@ -31,15 +31,20 @@
 
   .title-bar {
     @include topbar-height;
-    background-color: $white;
+    background-color: $hp-brown-2;
 
     img {
       height: 30px;
     }
   }
 
+  .title-bar-title {
+    font-size: 1.125em;
+    letter-spacing: .05em;
+  }
+
   .top-bar {
-    padding-bottom: 0;
+    padding-bottom: 1rem;
     padding-top: 0;
 
     img {
@@ -56,16 +61,18 @@
 
         > a {
           @include font-heading;
-          @include topbar-height;
-          color: $black;
-          font-size: rem-calc(13); // Use a smaller font for the top bar links
+          line-height: 2.25rem;
+
+          @include breakpoint(medium) {
+            @include topbar-height;
+          }
         }
 
         &:hover {
-          background-color: $hp-dark-gray;
+          background-color: $hp-brown-2;
 
           > a {
-            color: $hp-light-gray;
+            color: $hp-orange-1;
           }
         }
       }
@@ -78,7 +85,7 @@
 }
 
 .footer {
-  background-color: $hp-dark-gray;
+  background-color: $hp-brown-2;
   color: $white;
   padding: 30px 0;
   text-align: center;
@@ -89,11 +96,11 @@
     line-height: 1.8;
 
     a {
-      color: $hp-pink-3;
+      color: $hp-orange-1;
     }
 
     &-fade {
-      color: $hp-light-gray;
+      color: $hp-orange-1;
       font-size: .6rem;
 
       @include breakpoint(medium) {
