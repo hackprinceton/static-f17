@@ -64,6 +64,7 @@ p {
 
         > a {
           @include font-heading;
+          color: $hp-orange-1;
           line-height: 2.25rem;
 
           @include breakpoint(medium) {
