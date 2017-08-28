@@ -1,15 +1,16 @@
 function scrollToHash(hash) {
   $(window).stop(true).scrollTo(hash, {
+    axis: 'y',
     duration: 400,
-    interrupt: true,
-  });
+    interrupt: false,
+  }, );
 }
 
 function hashLinkHandler(e) {
   e.preventDefault();
   history.pushState(null, null, this.hash);
   scrollToHash(this.hash);
-  
+
   if (Foundation.MediaQuery.is('small only')) {
     $('#main-menu').hide('fast');
   }
