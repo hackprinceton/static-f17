@@ -88,7 +88,7 @@
 
       @include breakpoint(medium) {
         text-align: right;
-        top: calc(15% + 55vw);
+        top: calc(10% + 55vw);
         right: rem-calc(30); // align with mlh badge
       }
 
@@ -150,10 +150,8 @@
     background-size: 90vw;
 
     @include breakpoint(medium) {
-      background-attachment: fixed;
-      background-position: 50% calc(50% + #{$topbar-height});
-      background-size: 80%;
-      padding-top: 0;
+      background-position: 15% calc(10% + #{$topbar-height});
+      background-size: 70vw;
     }
 
     .inner {
@@ -161,7 +159,6 @@
 
       @include breakpoint(medium) {
         @include full-height;
-        height: 35em; // approx height of About section
       }
     }
 
@@ -173,17 +170,14 @@
     }
 
     .title {
+      margin-top: 5vw;
       @include breakpoint(medium) {
         margin-top: 10vh;
       }
     }
 
     .text {
-      margin-top: 40vw;
-
-      @include breakpoint(medium) {
-        @include vertical-center;
-      }
+      padding-top: 40vw;
     }
   }
 
