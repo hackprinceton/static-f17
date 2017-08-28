@@ -9,7 +9,10 @@ function hashLinkHandler(e) {
   e.preventDefault();
   history.pushState(null, null, this.hash);
   scrollToHash(this.hash);
-  $('#main-menu').hide();
+  
+  if (Foundation.MediaQuery.is('small only')) {
+    $('#main-menu').hide('fast');
+  }
 }
 
 $(document).ready(() => {
