@@ -23,7 +23,6 @@
   }
 
   section {
-    padding-bottom: 1.5em;
     padding-top: 3.5em;
 
     .title {
@@ -44,28 +43,21 @@
   }
 
   .section-top {
-    overflow: visible;
+    background-image: url('../img/tree.svg');
+    background-position: 0 calc(15% + #{$topbar-height});
+    background-repeat: no-repeat;
+    background-size: 95vw;
     position: relative;
     padding-top: 0;
     padding-bottom: 0;
 
-    // Wrapping in a pseudo-element allows for rotation on desktop:
-    // https://www.sitepoint.com/css3-transform-background-image/
-    &:before {
-      content: "";
-      background-image: url('../img/tree-mobile.svg');
-      background-position: 0 calc(15% + #{$topbar-height});
-      background-repeat: no-repeat;
-      background-size: 95vw;
-      height: 100vh;
-      position: absolute;
-      width: 100vw;
-      z-index: -1;
+    @include breakpoint(medium) {
+      background-size: 75vw;
+      background-position-y: calc(10% + #{$topbar-height});
+    }
 
-      @include breakpoint(medium) {
-        background-size: 75vw;
-        background-position-y: calc(10% + #{$topbar-height});
-      }
+    @include breakpoint(large) {
+      background: none;
     }
 
     .inner {
@@ -84,12 +76,16 @@
       color: $hp-brown-1;
       position: absolute;
       top: 60%;
-      width: calc(100% - 1.25rem);
 
       @include breakpoint(medium) {
         text-align: right;
         top: calc(10% + 55vw);
         right: rem-calc(30); // align with mlh badge
+      }
+
+      @include breakpoint(large) {
+        top: unset;
+        bottom: 0;
       }
 
       .title {
@@ -154,11 +150,15 @@
       background-size: 70vw;
     }
 
+    @include breakpoint(large) {
+      background-position: 0 5vw;
+    }
+
     .inner {
       padding-top: rem-calc(30);
 
-      @include breakpoint(medium) {
-        @include full-height;
+      @include breakpoint(large) {
+        padding-top: 0;
       }
     }
 
@@ -178,6 +178,10 @@
 
     .text {
       padding-top: 40vw;
+
+      @include breakpoint(large) {
+        padding-top: 20vw;
+      }
     }
   }
 
@@ -187,6 +191,7 @@
     background-position: 0 5rem;
     background-repeat: no-repeat;
     background-size: 95vw;
+    padding-bottom: 3rem;
 
     @include breakpoint(medium) {
       background: none;
@@ -200,9 +205,12 @@
 
     .title {
       @include breakpoint(medium) {
+        margin-bottom: 0.5em;
+      }
+
+      @include breakpoint(medium only) {
         // faqs are spaced 50px, gutter is 20px
         margin-left: 30px;
-        margin-bottom: 0.5em;
       }
     }
 
@@ -212,9 +220,18 @@
         background-position: 50% calc(50% + #{$topbar-height});
         background-repeat: no-repeat space;
         background-size: 40px;
+      }
 
+      @include breakpoint(medium only) {
+        // hack to fix layout issue on medium screens
+        // where the faqs is wider than the viewport
         margin-left: -20px;
         margin-right: -10px;
+      }
+
+      @include breakpoint(large) {
+        margin-left: -50px;
+        margin-right: -50px;
       }
     }
 
@@ -226,7 +243,7 @@
 
       @include breakpoint(medium) {
         padding-left: 50px;
-        padding-right: 40px;
+        padding-right: 50px;
         width: 50%;
       }
 
