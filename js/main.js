@@ -3,7 +3,7 @@ function scrollToHash(hash) {
     axis: 'y',
     duration: 400,
     interrupt: false,
-  }, );
+  });
 }
 
 function hashLinkHandler(e) {
@@ -16,10 +16,10 @@ function hashLinkHandler(e) {
   }
 }
 
-$(document).ready(() => {
+$(document).ready(function() {
   $(document).foundation();
 
-  this.$('.faq-wrap').masonry({
+  $('.faq-wrap').masonry({
     itemSelector: '.faq',
     columnWidth: '.faq-sizer',
     percentPosition: true,
@@ -28,8 +28,8 @@ $(document).ready(() => {
   // https://gist.github.com/flesler/3f3e1166690108abf747
   $('body').on('click', "a[href^='#'], a[href^='/#']", hashLinkHandler);
 
-  this.$('.faq').on('on.zf.toggler off.zf.toggler', () => {
-    this.$('.faq-wrap').masonry();
+  $('.faq').on('on.zf.toggler off.zf.toggler', function() {
+    $('.faq-wrap').masonry();
   });
 
   if (window.location.hash[0] === '#') {
