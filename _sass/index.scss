@@ -4,6 +4,18 @@
 .template-home {
   position: relative;
 
+  @include breakpoint(large) {
+    background-image: url('../img/tree-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: 80vw;
+    background-position: 0 10vmin;
+
+    @media (min-aspect-ratio: 3/2) {
+      background-size: 60vw;
+      background-position-y: 20vmin
+    }
+  }
+
   #mlh-trust-badge {
     display: block;
     max-width: 65px;
@@ -60,6 +72,11 @@
       background: none;
     }
 
+    @include breakpoint(xxlarge) {
+      margin: 0;
+      max-width: unset;
+    }
+
     .inner {
       @include full-height;
 
@@ -69,6 +86,10 @@
 
       @include breakpoint(medium) {
         height: unset;
+
+        @media (max-aspect-ratio: 1/1) {
+          min-height: 80vh;
+        }
       }
     }
 
@@ -86,6 +107,19 @@
       @include breakpoint(large) {
         top: unset;
         bottom: 0;
+
+        @media (max-aspect-ratio: 1/1) {
+          top: calc(10% + 55vw);
+        }
+      }
+
+      @include breakpoint(xxlarge) {
+        right: 5vw;
+
+        @media (min-aspect-ratio: 3/2) {
+          top: 40%;
+          right: 10vw;
+        }
       }
 
       .title {
@@ -152,6 +186,10 @@
 
     @include breakpoint(large) {
       background-position: 0 5vw;
+    }
+
+    @include breakpoint(xlarge) {
+      background-position-y: 0;
     }
 
     .inner {
