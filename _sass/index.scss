@@ -78,15 +78,11 @@
     }
 
     .inner {
-      @include full-height;
-
-      // minimum height of the section
-      height: 130vw;
+      min-height: 90vw;
+      height: calc(100vh - #{$topbar-height});
       position: relative;
 
       @include breakpoint(medium) {
-        height: unset;
-
         @media (max-aspect-ratio: 1/1) {
           min-height: 80vh;
         }
@@ -261,11 +257,14 @@
     }
 
     .faq-wrap {
+      margin-top: 7.5rem;
+
       @include breakpoint(medium) {
         background-image: url('../img/leaves-vert.svg');
         background-position: 50% calc(50% + #{$topbar-height});
         background-repeat: no-repeat space;
         background-size: 40px;
+        margin-top: 0;
       }
 
       @include breakpoint(medium only) {
