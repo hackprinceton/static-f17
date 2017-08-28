@@ -214,7 +214,7 @@
         background-size: 40px;
 
         margin-left: -20px;
-        margin-right: -20px;
+        margin-right: -10px;
       }
     }
 
@@ -225,7 +225,8 @@
       width: auto;
 
       @include breakpoint(medium) {
-        padding: 0 50px;
+        padding-left: 50px;
+        padding-right: 40px;
         width: 50%;
       }
 
@@ -334,7 +335,7 @@
       }
 
       .sponsor-tier:not(:last-child) {
-        border-bottom: 1px solid $hp-orange-1;
+        border-bottom: 1px solid $hp-brown-1;
       }
 
       .sponsors-title > a {
