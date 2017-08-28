@@ -36,7 +36,7 @@ layout: default
                 <div class="medium-4 medium-offset-1 columns title-outer">
                     <h2 class="title" id="about-title">About</h2>
                 </div>
-                <div class="medium-7 columns end text">
+                <div class="medium-7 large-6 columns end text">
                     <p>
                         For 36 hours on March 31st - April 2nd, HackPrinceton will bring together 500 developers and designers from across the country to create incredible software and hardware projects. Our theme at HackPrinceton this semester is "Spring Forward", where we will provide a comfortable and enlivening atmosphere for you to build out progressive, innovative, and crazy ideas.
                     </p>
@@ -52,7 +52,7 @@ layout: default
 
         <section id="faq" class="section-faq">
             <div class="row">
-                <div class="small-12 large-10 large-offset-1 columns">
+                <div class="small-12 large-10 large-centered columns">
                     <h2 class="title">FAQs</h2>
                 </div>
             </div>
@@ -76,7 +76,7 @@ layout: default
 
         <section id="partners" class="section-sponsors">
             <div class="row">
-                <div class="columns">
+                <div class="small-12 large-10 large-centered columns">
                     <h2 class="title">Partners</h2>
 
                     <p class="potential-followthrough">
@@ -88,7 +88,7 @@ layout: default
                 </div>
             </div>
             <div class="row">
-                <div class="small-12 columns sponsors">
+                <div class="small-12 large-10 large-centered columns sponsors">
                     {% for tier_hash in site.data.tiersorder %}
                     {% assign tier_name = tier_hash["tier"] %}
                     {% assign tier = site.data.tiers[tier_name] %}
