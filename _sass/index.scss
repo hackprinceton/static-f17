@@ -189,11 +189,7 @@
     background-size: 95vw;
 
     @include breakpoint(medium) {
-      background-attachment: fixed, scroll;
-      background-image: url('../img/floral-faq.svg');
-      background-position: 50% calc(50% + #{$topbar-height}), 0;
-      background-size: 50%, auto;
-      padding-top: 3.5em;
+      background: none;
     }
 
     a {
@@ -204,14 +200,19 @@
 
     .title {
       @include breakpoint(medium) {
-        margin-bottom: 1em;
+        // faqs are spaced 50px, gutter is 20px
+        margin-left: 30px;
+        margin-bottom: 0.5em;
       }
     }
 
     .faq-wrap {
-      margin-top: 35vw;
-
       @include breakpoint(medium) {
+        background-image: url('../img/leaves-vert.svg');
+        background-position: 50% calc(50% + #{$topbar-height});
+        background-repeat: no-repeat space;
+        background-size: 40px;
+
         margin-left: -20px;
         margin-right: -20px;
       }
@@ -224,7 +225,7 @@
       width: auto;
 
       @include breakpoint(medium) {
-        padding: 0 20px;
+        padding: 0 50px;
         width: 50%;
       }
 
