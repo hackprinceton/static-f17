@@ -47,8 +47,7 @@ p {
   }
 
   .top-bar {
-    padding-bottom: 1rem;
-    padding-top: 0;
+    padding: 0;
 
     img {
       height: 30px;
@@ -58,7 +57,11 @@ p {
       @include topbar-height;
     }
 
-    ul {
+    .columns {
+      padding-right: 0;
+    }
+
+    .menu {
       li {
         @include animate-fade(background-color);
 
@@ -73,10 +76,10 @@ p {
         }
 
         &:hover {
-          background-color: $hp-brown-2;
+          background-color: $hp-orange-1;
 
           > a {
-            color: $hp-orange-1;
+            color: $hp-brown-1;
           }
         }
       }
