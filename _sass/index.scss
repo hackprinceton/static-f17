@@ -47,7 +47,7 @@
     background-image: url('../img/tree-mobile.svg');
     background-position: 0 calc(15% + #{$topbar-height});
     background-repeat: no-repeat;
-    background-size: 95%;
+    background-size: 95vw;
     overflow: visible;
     padding-top: 0;
     padding-bottom: 0;
@@ -132,9 +132,9 @@
   .section-about {
     background-image: url('../img/leaves-horz.svg');
     background-attachment: scroll;
-    background-position: center 25vw;
+    background-position: center 5rem;
     background-repeat: no-repeat;
-    background-size: 90%;
+    background-size: 90vw;
 
     @include breakpoint(medium) {
       background-attachment: fixed;
@@ -144,7 +144,6 @@
     }
 
     .inner {
-      padding-bottom: rem-calc(30);
       padding-top: rem-calc(30);
 
       @include breakpoint(medium) {
@@ -154,8 +153,6 @@
     }
 
     .title-outer {
-      margin-bottom: 2em;
-
       @include breakpoint(medium) {
         height: 100%;
         margin-bottom: 0;
@@ -169,7 +166,7 @@
     }
 
     .text {
-      margin-top: 25vw;
+      margin-top: 40vw;
 
       @include breakpoint(medium) {
         @include vertical-center;
@@ -180,9 +177,9 @@
   .section-faq {
     background-image: url('../img/tree-2-mobile.svg');
     background-attachment: scroll;
-    background-position: 0 35vw;
+    background-position: 0 5rem;
     background-repeat: no-repeat;
-    background-size: 95%;
+    background-size: 95vw;
 
     @include breakpoint(medium) {
       background-attachment: fixed, scroll;
@@ -199,8 +196,6 @@
     }
 
     .title {
-      margin-bottom: 2em;
-
       @include breakpoint(medium) {
         margin-bottom: 1em;
       }
