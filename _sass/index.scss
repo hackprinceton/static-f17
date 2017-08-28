@@ -7,7 +7,7 @@
   @include breakpoint(large) {
     background-image: url('../img/tree-desktop.svg');
     background-repeat: no-repeat;
-    background-size: 80vw;
+    background-size: 75vw;
     background-position: 0 10vmin;
 
     @media (min-aspect-ratio: 3/2) {
@@ -63,6 +63,12 @@
     padding-top: 0;
     padding-bottom: 0;
 
+    @include breakpoint(medium down) {
+      @include breakpoint(landscape) {
+        background-image: none;
+      }
+    }
+
     @include breakpoint(medium) {
       background-size: 75vw;
       background-position-y: calc(10% + #{$topbar-height});
@@ -78,12 +84,11 @@
     }
 
     .inner {
-      min-height: 90vw;
       height: calc(100vh - #{$topbar-height});
       position: relative;
 
       @include breakpoint(medium) {
-        @media (max-aspect-ratio: 1/1) {
+        @include breakpoint(portrait) {
           min-height: 80vh;
         }
       }
@@ -104,7 +109,7 @@
         top: unset;
         bottom: 0;
 
-        @media (max-aspect-ratio: 1/1) {
+        @include breakpoint(portrait) {
           top: calc(10% + 55vw);
         }
       }
@@ -116,6 +121,10 @@
           top: 40%;
           right: 10vw;
         }
+      }
+
+      @include breakpoint(landscape) {
+        top: 30%;
       }
 
       .title {
@@ -186,6 +195,7 @@
     @include breakpoint(medium) {
       background-position: 15% calc(10% + #{$topbar-height});
       background-size: 70vw;
+      margin-top: -3.5em;
     }
 
     @include breakpoint(large) {
