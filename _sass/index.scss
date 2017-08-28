@@ -44,20 +44,28 @@
   }
 
   .section-top {
-    background-image: url('../img/tree-mobile.svg');
-    background-position: 0 calc(15% + #{$topbar-height});
-    background-repeat: no-repeat;
-    background-size: 95vw;
     overflow: visible;
+    position: relative;
     padding-top: 0;
     padding-bottom: 0;
 
-    @include breakpoint(medium) {
-      background-attachment: fixed;
-      background-position: center;
-      background-size: 45vw;
-      overflow-x: auto;
-      overflow-y: hidden;
+    // Wrapping in a pseudo-element allows for rotation on desktop:
+    // https://www.sitepoint.com/css3-transform-background-image/
+    &:before {
+      content: "";
+      background-image: url('../img/tree-mobile.svg');
+      background-position: 0 calc(15% + #{$topbar-height});
+      background-repeat: no-repeat;
+      background-size: 95vw;
+      height: 100vh;
+      position: absolute;
+      width: 100vw;
+      z-index: -1;
+
+      @include breakpoint(medium) {
+        background-size: 75vw;
+        background-position-y: calc(10% + #{$topbar-height});
+      }
     }
 
     .inner {
@@ -66,6 +74,10 @@
       // minimum height of the section
       height: 130vw;
       position: relative;
+
+      @include breakpoint(medium) {
+        height: unset;
+      }
     }
 
     .main-text {
@@ -75,8 +87,9 @@
       width: calc(100% - 1.25rem);
 
       @include breakpoint(medium) {
-        @include vertical-center;
         text-align: right;
+        top: calc(15% + 55vw);
+        right: rem-calc(30); // align with mlh badge
       }
 
       .title {
@@ -96,13 +109,13 @@
       .subtext {
         margin-bottom: 1rem;
 
-        @include breakpoint(medium) {
-          font-size: rem-calc(40);
-        }
-
         .date {
           font-size: 6.5vw;
           margin-bottom: 0;
+
+          @include breakpoint(medium) {
+            font-size: 2rem;
+          }
         }
 
         .info {
