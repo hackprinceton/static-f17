@@ -134,6 +134,10 @@
           font-size: rem-calc(90);
           text-align: right;
         }
+
+        @include breakpoint(xxlarge) {
+          font-size: 5.5vw;
+        }
       }
 
       .subtext {
@@ -145,6 +149,10 @@
 
           @include breakpoint(medium) {
             font-size: 2rem;
+          }
+
+          @include breakpoint(xxlarge) {
+            font-size: 2.5vw;
           }
         }
 
