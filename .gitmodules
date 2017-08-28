@@ -1,6 +1,6 @@
 [submodule "_sass/hp-styles"]
 	path = _sass/hp-styles
-	url = https://github.com/princetoneclub/hp-styles.git
+	url = https://github.com/hackprinceton/styles.git
 [submodule "_sass/foundation"]
 	path = _sass/foundation
 	url = https://github.com/zurb/foundation-sites.git
