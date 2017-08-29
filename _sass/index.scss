@@ -68,6 +68,7 @@
       padding-top: 0;
       padding-bottom: 0;
       width: 100vw;
+      z-index: -1;
 
       @include breakpoint(medium down) {
         @include breakpoint(landscape) {
@@ -249,7 +250,7 @@
   .section-faq {
     background-image: url('../img/tree-2-mobile.svg');
     background-attachment: scroll;
-    background-position: 0 5rem;
+    background-position: 0 5vw;
     background-repeat: no-repeat;
     background-size: 95vw;
     padding-bottom: 3rem;
