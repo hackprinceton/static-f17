@@ -253,6 +253,7 @@
     background-position: 0 5vw;
     background-repeat: no-repeat;
     background-size: 95vw;
+    overflow-x: hidden;
     padding-bottom: 3rem;
 
     @include breakpoint(medium) {
@@ -268,11 +269,6 @@
     .title {
       @include breakpoint(medium) {
         margin-bottom: 0.5em;
-      }
-
-      @include breakpoint(medium only) {
-        // faqs are spaced 50px, gutter is 20px
-        margin-left: 30px;
       }
     }
 
@@ -290,8 +286,8 @@
       @include breakpoint(medium only) {
         // hack to fix layout issue on medium screens
         // where the faqs is wider than the viewport
-        margin-left: -20px;
-        margin-right: -10px;
+        margin-left: -50px;
+        margin-right: -50px;
       }
 
       @include breakpoint(large) {
