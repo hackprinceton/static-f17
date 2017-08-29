@@ -55,28 +55,37 @@
   }
 
   .section-top {
-    background-image: url('../img/tree-mobile.svg');
-    background-position: 0 calc(15% + #{$topbar-height});
-    background-repeat: no-repeat;
-    background-size: 95vw;
-    position: relative;
     padding-top: 0;
-    padding-bottom: 0;
 
-    @include breakpoint(medium down) {
-      @include breakpoint(landscape) {
-        background-image: none;
+    &:before {
+      content: '';
+      background-image: url('../img/tree-mobile.svg');
+      background-position: 0 calc(12.5% + #{$topbar-height});
+      background-repeat: no-repeat;
+      background-size: 95vw;
+      height: 100vh;
+      position: absolute;
+      padding-top: 0;
+      padding-bottom: 0;
+      width: 100vw;
+
+      @include breakpoint(medium down) {
+        @include breakpoint(landscape) {
+          opacity: 0.15;
+        }
+      }
+
+      @include breakpoint(medium) {
+        background-size: 75vw;
+        background-position-y: calc(10% + #{$topbar-height});
+      }
+
+      @include breakpoint(large) {
+        background: none;
       }
     }
 
-    @include breakpoint(medium) {
-      background-size: 75vw;
-      background-position-y: calc(10% + #{$topbar-height});
-    }
 
-    @include breakpoint(large) {
-      background: none;
-    }
 
     @include breakpoint(xxlarge) {
       margin: 0;
@@ -101,7 +110,7 @@
 
       @include breakpoint(medium) {
         text-align: right;
-        top: calc(10% + 55vw);
+        top: calc(10% + 50vw);
         right: rem-calc(30); // align with mlh badge
       }
 
@@ -110,7 +119,7 @@
         bottom: 0;
 
         @include breakpoint(portrait) {
-          top: calc(10% + 55vw);
+          top: calc(10% + 50vw);
         }
       }
 
