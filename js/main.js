@@ -1,8 +1,12 @@
 function scrollToHash(hash) {
+  const offsetTop = -$('.title-bar').height();
   $(window).stop(true).scrollTo(hash, {
     axis: 'y',
     duration: 400,
     interrupt: false,
+    offset: {
+      top: offsetTop,
+    },
   });
 }
 
@@ -11,7 +15,7 @@ function hashLinkHandler(e) {
   history.pushState(null, null, this.hash);
   scrollToHash(this.hash);
 
-  if (Foundation.MediaQuery.is('small only')) {
+  if (Foundation.MediaQuery.is('medium down')) {
     $('#main-menu').hide('fast');
   }
 }

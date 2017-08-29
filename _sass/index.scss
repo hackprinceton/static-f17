@@ -202,9 +202,9 @@
     background-size: 90vw;
 
     @include breakpoint(medium) {
-      background-position: 15% calc(10% + #{$topbar-height});
+      background-position: 15% calc(10% + #{$topbar-height} - 3.5em);
       background-size: 70vw;
-      margin-top: -3.5em;
+      padding-top: 0;
     }
 
     @include breakpoint(large) {
