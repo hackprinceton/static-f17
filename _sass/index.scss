@@ -41,9 +41,8 @@
       color: $hp-brown-2;
       font-size: 2em;
 
-      @include breakpoint(medium) {
-        font-size: 2.5em;
-        text-align: left;
+      @include breakpoint(450) {
+        font-size: 3em;
       }
     }
 
@@ -140,7 +139,7 @@
       .title {
         color: $hp-orange-1;
         font-family: $header-font-family;
-        font-size: 16vw;
+        font-size: 15.5vw;
         line-height: 1;
         margin-bottom: 0;
 
@@ -186,7 +185,7 @@
       }
 
       .followthrough {
-        margin-top: 2em;
+        margin-top: 1em;
 
         @include breakpoint(medium) {
           margin-top: 0;
@@ -248,13 +247,18 @@
   }
 
   .section-faq {
+    $tree-position-breakpoint: 375;
     background-image: url('../img/tree-2-mobile.svg');
     background-attachment: scroll;
-    background-position: 0 5vw;
+    background-position: 0 35vw;
     background-repeat: no-repeat;
     background-size: 95vw;
     overflow-x: hidden;
     padding-bottom: 3rem;
+
+    @include breakpoint($tree-position-breakpoint) {
+      background-position-y: 15vw;
+    }
 
     @include breakpoint(medium) {
       background: none;
@@ -273,7 +277,11 @@
     }
 
     .faq-wrap {
-      margin-top: 7.5rem;
+      margin-top: 45%;
+
+      @include breakpoint($tree-position-breakpoint) {
+        margin-top: 35%;
+      }
 
       @include breakpoint(medium) {
         background-image: url('../img/leaves-vert.svg');
