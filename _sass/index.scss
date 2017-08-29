@@ -24,6 +24,7 @@
     right: 20px;
     top: 0;
     width: 10%;
+    z-index: 1;
 
     @include breakpoint(medium) {
       right: 30px;
@@ -421,7 +422,7 @@
       }
 
       .sponsor-tier:not(:last-child) {
-        border-bottom: 1px solid $hp-brown-1;
+        border-bottom: 1px solid $hp-orange-1;
       }
 
       .sponsors-title > a {
