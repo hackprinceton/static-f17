@@ -3,12 +3,23 @@
 // Include Foundation framework
 @import 'hp-styles/settings';
 @import 'foundation/scss/foundation';
-@include foundation-everything;
+
+@include foundation-global-styles;
+@include foundation-grid;
+@include foundation-typography;
+@include foundation-button;
+@include foundation-menu;
+@include foundation-menu-icon;
+@include foundation-label;
+@include foundation-title-bar;
+@include foundation-top-bar;
+@include foundation-visibility-classes;
+@include foundation-float-classes;
 
 // Include custom styles
 @import 'application';
 @import 'mainLayout';
-@import 'home';
+@import 'index';
 @import 'princeton';
 @import 'travel';
 @import 'guide';

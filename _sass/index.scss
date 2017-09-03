@@ -2,8 +2,19 @@
 @import 'hp-styles/mixins';
 
 .template-home {
-  background-color: $hp-pink-1;
   position: relative;
+
+  @include breakpoint(large) {
+    background-image: url('../img/tree-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: 75vw;
+    background-position: 0 10vmin;
+
+    @media (min-aspect-ratio: 3/2) {
+      background-size: 60vw;
+      background-position: 0 20vmin;
+    }
+  }
 
   #mlh-trust-badge {
     display: block;
@@ -13,6 +24,8 @@
     right: 20px;
     top: 0;
     width: 10%;
+    z-index: 1;
+
     @include breakpoint(medium) {
       right: 30px;
     }
@@ -23,16 +36,14 @@
   }
 
   section {
-    padding-bottom: 3.5em;
     padding-top: 3.5em;
 
     .title {
-      font-size: 1.5em;
-      text-align: center;
+      color: $hp-brown-2;
+      font-size: 2em;
 
-      @include breakpoint(medium) {
-        font-size: 2.5em;
-        text-align: left;
+      @include breakpoint(450) {
+        font-size: 3em;
       }
     }
 
@@ -44,63 +55,120 @@
   }
 
   .section-top {
-    background: no-repeat $hp-pink-1;
-    background-image: url('../img/floral-home.svg');
-    background-position: 57.5% calc(20% + 30px);
-    background-size: 85%;
-    overflow: visible;
     padding-top: 0;
-    padding-bottom: 0;
 
-    @include breakpoint(medium) {
-      background-attachment: fixed;
-      background-position: center;
-      background-size: 45vw;
-      overflow-x: auto;
-      overflow-y: hidden;
+    &:before {
+      content: '';
+      background-image: url('../img/tree-mobile.svg');
+      background-position: 0 calc(12.5% + #{$topbar-height});
+      background-repeat: no-repeat;
+      background-size: 95vw;
+      height: 100vh;
+      position: absolute;
+      padding-top: 0;
+      padding-bottom: 0;
+      width: 100%;
+      z-index: -1;
+
+      @include breakpoint(medium down) {
+        @include breakpoint(landscape) {
+          opacity: 0.15;
+        }
+      }
+
+      @include breakpoint(medium) {
+        background-size: 75vw;
+        background-position-y: calc(10% + #{$topbar-height});
+      }
+
+      @include breakpoint(large) {
+        background: none;
+      }
+    }
+
+
+
+    @include breakpoint(xxlarge) {
+      margin: 0;
+      max-width: none;
     }
 
     .inner {
-      @include full-height;
-
-      height: 550px;
+      height: calc(100vh - #{$topbar-height});
       position: relative;
+
+      @include breakpoint(medium) {
+        @include breakpoint(portrait) {
+          min-height: 80vh;
+        }
+      }
     }
 
     .main-text {
-      bottom: 2rem;
-      color: $hp-dark-gray;
+      color: $hp-brown-1;
       position: absolute;
-      text-align: center;
-      width: calc(100% - 1.25rem);
+      top: 60%;
 
       @include breakpoint(medium) {
-        @include vertical-center;
         text-align: right;
+        top: calc(10% + 50vw);
+        right: rem-calc(30); // align with mlh badge
+      }
+
+      @include breakpoint(large) {
+        top: auto;
+        bottom: 0;
+
+        @include breakpoint(portrait) {
+          top: calc(10% + 50vw);
+        }
+      }
+
+      @include breakpoint(xxlarge) {
+        right: 5vw;
+
+        @media (min-aspect-ratio: 3/2) {
+          top: 40%;
+          right: 10vw;
+        }
+      }
+
+      @include breakpoint(landscape) {
+        top: 30%;
       }
 
       .title {
+        color: $hp-orange-1;
         font-family: $header-font-family;
-        font-size: 2.5rem;
-        line-height: .5;
-        text-align: center;
+        font-size: 15.5vw;
+        line-height: 1;
+        margin-bottom: 0;
+
 
         @include breakpoint(medium) {
           font-size: rem-calc(90);
           text-align: right;
         }
+
+        @include breakpoint(xxlarge) {
+          font-size: 5.5vw;
+        }
       }
 
       .subtext {
-        font-size: 1rem;
         margin-bottom: 1rem;
 
-        @include breakpoint(medium) {
-          font-size: rem-calc(40);
-        }
-
         .date {
+          font-size: 6.5vw;
           margin-bottom: 0;
+
+          @include breakpoint(medium) {
+            font-size: 2rem;
+          }
+
+          @include breakpoint(xxlarge) {
+            font-size: 2.5vw;
+          }
         }
 
         .info {
@@ -118,7 +186,7 @@
       }
 
       .followthrough {
-        margin-top: 5em;
+        margin-top: 1em;
 
         @include breakpoint(medium) {
           margin-top: 0;
@@ -127,35 +195,36 @@
     }
   }
 
-
   .section-about {
-    background: url('../img/floral-about.png') no-repeat $hp-pink-2;
+    background-image: url('../img/leaves-horz.svg');
     background-attachment: scroll;
-    background-position: center 3.125rem;
-    background-size: 75%;
-    padding-top: calc(75% + 3rem);
+    background-position: center 5rem;
+    background-repeat: no-repeat;
+    background-size: 90vw;
 
     @include breakpoint(medium) {
-      background-attachment: fixed;
-      background-position: 50% calc(50% + #{$topbar-height});
-      background-size: 80%;
+      background-position: 15% calc(10% + #{$topbar-height} - 3.5em);
+      background-size: 70vw;
       padding-top: 0;
     }
 
-    .inner {
-      padding-bottom: rem-calc(30);
-      padding-top: rem-calc(30);
-      position: relative;
+    @include breakpoint(large) {
+      background-position: 0 5vw;
+    }
 
-      @include breakpoint(medium) {
-        @include full-height;
-        height: 35em; // approx height of About section
+    @include breakpoint(xlarge) {
+      background-position-y: 0;
+    }
+
+    .inner {
+      padding-top: rem-calc(30);
+
+      @include breakpoint(large) {
+        padding-top: 0;
       }
     }
 
     .title-outer {
-      margin-bottom: 2em;
-
       @include breakpoint(medium) {
         height: 100%;
         margin-bottom: 0;
@@ -163,55 +232,76 @@
     }
 
     .title {
+      margin-top: 5vw;
       @include breakpoint(medium) {
         margin-top: 10vh;
       }
     }
 
     .text {
-      line-height: 1.25;
+      padding-top: 30%;
 
-      @include breakpoint(medium) {
-        @include vertical-center;
+      @include breakpoint(large) {
+        padding-top: 20vw;
       }
     }
   }
 
   .section-faq {
-    background: url('../img/floral-faq.svg') no-repeat, $hp-periwinkle-2;
-    background-attachment: scroll, scroll;
-    background-position: center 3.125rem, 0;
-    background-size: 75%, auto;
-    padding-top: calc(75% + 3rem);
+    $tree-position-breakpoint: 375;
+    background-image: url('../img/tree-2-mobile.svg');
+    background-attachment: scroll;
+    background-position: 0 35vw;
+    background-repeat: no-repeat;
+    background-size: 95vw;
+    overflow-x: hidden;
+    padding-bottom: 3rem;
+
+    @include breakpoint($tree-position-breakpoint) {
+      background-position-y: 15vw;
+    }
 
     @include breakpoint(medium) {
-      background-attachment: fixed, scroll;
-      background-image: url('../img/floral-faq.svg'), linear-gradient(to right, $hp-periwinkle-1 0%, $hp-periwinkle-1 49.5%, $hp-periwinkle-2 50%, $hp-periwinkle-1 100%);
-      background-position: 50% calc(50% + #{$topbar-height}), 0;
-      background-size: 50%, auto;
-      padding-top: 3.5em;
+      background: none;
     }
 
     a {
-      color: $hp-pink-2;
-
       &:hover {
-        color: scale-color($hp-pink-2, $lightness: -14%);
+        color: scale-color($hp-orange-2, $lightness: -14%);
       }
     }
 
     .title {
-      margin-bottom: 2em;
-
       @include breakpoint(medium) {
-        margin-bottom: 1em;
+        margin-bottom: 0.5em;
       }
     }
 
     .faq-wrap {
+      margin-top: 45%;
+
+      @include breakpoint($tree-position-breakpoint) {
+        margin-top: 35%;
+      }
+
       @include breakpoint(medium) {
-        margin-left: -20px;
-        margin-right: -20px;
+        background-image: url('../img/leaves-vert.svg');
+        background-position: center calc(50% + #{$topbar-height});
+        background-repeat: no-repeat space;
+        background-size: 40px;
+        margin-top: 0;
+      }
+
+      @include breakpoint(medium only) {
+        // hack to fix layout issue on medium screens
+        // where the faqs is wider than the viewport
+        margin-left: -50px;
+        margin-right: -50px;
+      }
+
+      @include breakpoint(large) {
+        margin-left: -50px;
+        margin-right: -50px;
       }
     }
 
@@ -222,12 +312,13 @@
       width: auto;
 
       @include breakpoint(medium) {
-        padding: 0 20px;
+        padding-left: 50px;
+        padding-right: 50px;
         width: 50%;
       }
 
       a {
-        color: $hp-dark-gray;
+        color: $hp-brown-2;
       }
 
       .faq-title {
@@ -290,12 +381,9 @@
     background-color: $white;
     text-align: center;
 
-    .title {
-      text-align: center;
-    }
-
-    p {
-      text-align: center;
+    .title,
+    .potential-followthrough {
+      text-align: left;
     }
 
     .description {
@@ -312,7 +400,7 @@
       background-color: $white;
       box-sizing: border-box;
       margin: 0 auto;
-      padding-bottom: .5em;
+      padding-bottom: 2.5em;
       padding-top: .5em;
 
       a {
@@ -334,7 +422,7 @@
       }
 
       .sponsor-tier:not(:last-child) {
-        border-bottom: 1px solid $hp-pink-1;
+        border-bottom: 1px solid $hp-orange-1;
       }
 
       .sponsors-title > a {

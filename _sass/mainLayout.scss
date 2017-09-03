@@ -8,6 +8,10 @@
   padding-top: 0;
 }
 
+div, button, p, li, input, a {
+  letter-spacing: 0.02em;
+}
+
 // Prevent FOUC of top bar while loading
 // http://foundation.zurb.com/sites/docs/responsive-navigation.html
 .no-js {
@@ -31,16 +35,19 @@
 
   .title-bar {
     @include topbar-height;
-    background-color: $white;
+    background-color: $hp-brown-2;
 
     img {
       height: 30px;
     }
   }
 
+  .title-bar-title {
+    letter-spacing: .05em;
+  }
+
   .top-bar {
-    padding-bottom: 0;
-    padding-top: 0;
+    padding: 0;
 
     img {
       height: 30px;
@@ -50,22 +57,29 @@
       @include topbar-height;
     }
 
-    ul {
+    .columns {
+      padding-right: 0;
+    }
+
+    .menu {
       li {
         @include animate-fade(background-color);
 
         > a {
           @include font-heading;
-          @include topbar-height;
-          color: $black;
-          font-size: rem-calc(13); // Use a smaller font for the top bar links
+          color: $hp-orange-1;
+          line-height: 2.25rem;
+
+          @include breakpoint(medium) {
+            @include topbar-height;
+          }
         }
 
         &:hover {
-          background-color: $hp-dark-gray;
+          background-color: $hp-orange-1;
 
           > a {
-            color: $hp-light-gray;
+            color: $hp-brown-1;
           }
         }
       }
@@ -74,11 +88,12 @@
 
   .main-content {
     flex-grow: 1;
+    height: 100%;
   }
 }
 
 .footer {
-  background-color: $hp-dark-gray;
+  background-color: $hp-brown-2;
   color: $white;
   padding: 30px 0;
   text-align: center;
@@ -89,11 +104,11 @@
     line-height: 1.8;
 
     a {
-      color: $hp-pink-3;
+      color: $hp-orange-1;
     }
 
     &-fade {
-      color: $hp-light-gray;
+      color: $hp-orange-1;
       font-size: .6rem;
 
       @include breakpoint(medium) {
