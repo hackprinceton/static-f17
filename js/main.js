@@ -15,7 +15,7 @@ function hashLinkHandler(e) {
   history.pushState(null, null, this.hash);
   scrollToHash(this.hash);
 
-  if (Foundation.MediaQuery.is('medium down')) {
+  if (!Foundation.MediaQuery.atLeast('large')) {
     $('#main-menu').hide('fast');
   }
 }
