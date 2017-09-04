@@ -29,10 +29,6 @@ div, button, p, li, input, a {
 }
 
 .main-wrapper {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-
   .title-bar {
     @include topbar-height;
     background-color: $hp-brown-2;
@@ -84,11 +80,6 @@ div, button, p, li, input, a {
         }
       }
     }
-  }
-
-  .main-content {
-    flex-grow: 1;
-    height: 100%;
   }
 }
 
