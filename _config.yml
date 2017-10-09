@@ -1,6 +1,16 @@
+---
 title: HackPrinceton Fall 2017 | November 10-12, 2017
-description: Princeton University's 36-hour student hackathon. Learn, build, and explore software and hardware with 600 fellow students this November 10-12.
-baseurl:
+timezone: UTC
+collections:
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
+description: Princeton University's 36-hour student hackathon. Learn, build, and explore
+  software and hardware with 600 fellow students this November 10-12.
+baseurl: 
 incremental: true
 gems:
-  - jekyll-redirect-from
+- jekyll-redirect-from
