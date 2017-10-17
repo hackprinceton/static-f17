@@ -1,0 +1,37 @@
+<nav class="fixed-top full-width">
+    <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="large">
+        <a href="#home"><img src="{{ "img/logo.svg" | prepend: site.baseurl }}?{{site.time | date: '%s%N'}}"></a>
+        <div class="float-right">
+            <div class="title-bar-title" data-toggle="main-menu">Menu</div>
+            <button class="menu-icon" type="button" data-toggle="main-menu"></button>
+        </div>
+    </div>
+
+    <div id="main-menu" class="top-bar">
+        <div class="row columns">
+            <div class="top-bar-title show-for-large">
+                <a href="/"><img src="img/logo.svg"></a>
+            </div>
+
+            <div class="top-bar-left">
+                <ul class="vertical large-horizontal menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#partners">Partners</a></li>
+                </ul>
+            </div>
+
+            <div class="top-bar-right">
+                <ul class="js-show-if-logged-in hide vertical large-horizontal menu">
+                    <li><a href="https://my.hackprinceton.com/dashboard"><i class="fa fa-user"></i>&nbsp;&nbsp;My Dashboard</a></li>
+                    <li><a href="https://my.hackprinceton.com/logout">Log Out</a></li>
+                </ul>
+                <ul class="js-show-if-logged-out vertical large-horizontal menu">
+                    <li><a href="https://my.hackprinceton.com/register"><span class="home-section-title-emphasis">Apply Now</span></a></li>
+                    <li><a href="https://my.hackprinceton.com/">Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
