@@ -30,7 +30,9 @@ $(document).ready(function() {
   });
 
   // https://gist.github.com/flesler/3f3e1166690108abf747
-  $('body').on('click', "a[href^='#'], a[href^='/#']", hashLinkHandler);
+  if ($('.template-home').length > 0) {
+    $('body').on('click', "a[href^='#'], a[href^='/#']", hashLinkHandler);
+  }
 
   $('.faq').on('on.zf.toggler off.zf.toggler', function() {
     $('.faq-wrap').masonry();
