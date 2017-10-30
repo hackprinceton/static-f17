@@ -71,6 +71,10 @@ div, button, p, li, input, a {
           }
         }
 
+        &.current {
+          background-color: scale-color($hp-brown-1, $lightness: -12%);
+        }
+
         &:hover {
           background-color: $hp-orange-1;
 
