@@ -40,7 +40,9 @@ Shared styles are imported via a Git submodule from the
 There is a mini-api for use in [bebo-mobile](https://github.com/hackprinceton/bebo-mobile):
 
 - `GET /api/pages.json`: Returns a list of pages and their urls. Each item in
-  the list has a `title` and `url` key.
+  the list has a `title` and `url` key, and may have a `children` key, with a
+  list of child items with the same schema described earlier (but no further
+  children).
 
 ## Contributing
 

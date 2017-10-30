@@ -8,5 +8,6 @@
   url: /#partners
 - title: Guide
   url: /guide
-- title: Travel
-  url: /travel
+  children:
+    - title: Travel
+      url: /travel

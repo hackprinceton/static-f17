@@ -14,9 +14,18 @@
             </div>
 
             <div class="top-bar-left">
-                <ul class="vertical large-horizontal menu">
+                <ul class="vertical large-horizontal dropdown menu" data-dropdown-menu>
                     {% for page in site.data.pages %}
-                        <li><a href="{{ page.url }}" alt="{{ page.title }}">{{ page.title }}</a></li>
+                        <li>
+                            <a href="{{ page.url }}" alt="{{ page.title }}">{{ page.title }}</a>
+                            {% if page.children %}
+                                <ul class="menu">
+                                  {% for child in page.children %}
+                                    <li><a href="{{ child.url }}" alt="{{ child.title }}">{{ child.title }}</a></li>
+                                  {% endfor %}
+                                </ul>
+                            {% endif %}
+                        </li>
                     {% endfor %}
                 </ul>
             </div>
