@@ -35,6 +35,13 @@ the `_sass` directory and append an `@import` entry to `css/style.scss`.
 Shared styles are imported via a Git submodule from the
 [styles](https://github.com/hackprinceton/styles) repo.
 
+## API
+
+There is a mini-api for use in [bebo-mobile](https://github.com/hackprinceton/bebo-mobile):
+
+- `GET /api/pages.json`: Returns a list of pages and their urls. Each item in
+  the list has a `title` and `url` key.
+
 ## Contributing
 
 For HackPrinceton organizers, you can contribute to this site by adding and
