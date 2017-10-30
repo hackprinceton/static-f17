@@ -1,6 +1,6 @@
 ---
-# Used by bebo mobile to get the site structure.
 ---
+
 [
 {% for page in site.data.pages %}
     {
