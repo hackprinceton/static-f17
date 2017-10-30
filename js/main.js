@@ -23,23 +23,23 @@ function hashLinkHandler(e) {
 $(document).ready(function() {
   $(document).foundation();
 
-  $('.faq-wrap').masonry({
-    itemSelector: '.faq',
-    columnWidth: '.faq-sizer',
-    percentPosition: true,
-  });
-
-  // https://gist.github.com/flesler/3f3e1166690108abf747
   if ($('.template-home').length > 0) {
+    $('.faq-wrap').masonry({
+      itemSelector: '.faq',
+      columnWidth: '.faq-sizer',
+      percentPosition: true,
+    });
+
+    $('.faq').on('on.zf.toggler off.zf.toggler', function() {
+      $('.faq-wrap').masonry();
+    });
+
+    // https://gist.github.com/flesler/3f3e1166690108abf747
     $('body').on('click', "a[href^='#'], a[href^='/#']", hashLinkHandler);
-  }
 
-  $('.faq').on('on.zf.toggler off.zf.toggler', function() {
-    $('.faq-wrap').masonry();
-  });
-
-  if (window.location.hash[0] === '#') {
-    scrollToHash(window.location.hash);
+    if (window.location.hash[0] === '#') {
+      scrollToHash(window.location.hash);
+    }
   }
 
   // Read login status cookie, and show buttons if logged in
