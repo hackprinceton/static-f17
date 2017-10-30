@@ -1,0 +1,12 @@
+---
+# Used by bebo mobile to get the site structure.
+---
+[
+{% for page in site.data.pages %}
+    {
+        "title": "{{ page.title }}",
+        "url": "{{ page.url }}"
+    }
+    {% unless forloop.last %},{% endunless %}
+{% endfor %}
+]

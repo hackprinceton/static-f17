@@ -35,6 +35,21 @@ the `_sass` directory and append an `@import` entry to `css/style.scss`.
 Shared styles are imported via a Git submodule from the
 [styles](https://github.com/hackprinceton/styles) repo.
 
+## Notes
+
+There is a mini-api for use in [bebo-mobile](https://github.com/hackprinceton/bebo-mobile):
+
+- `GET /api/pages.json`: Returns a list of pages and their urls. Each item in
+  the list has a `title` and `url` key, and may have a `children` key, with a
+  list of child items with the same schema described earlier (but no further
+  children).
+
+The current way the active page selection works, every page and subpage should
+have unique names. This will prevent the accidental marking as activeof an item
+for `/guide` on `/dayof/guide`, for example. Why this bug exists? Because, it
+would seem, it is weirdly hard to do a simple `startsWith` in Liquid templating:
+https://stackoverflow.com/a/37026674
+
 ## Contributing
 
 For HackPrinceton organizers, you can contribute to this site by adding and

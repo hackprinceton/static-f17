@@ -14,11 +14,24 @@
             </div>
 
             <div class="top-bar-left">
-                <ul class="vertical large-horizontal menu">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#faq">FAQ</a></li>
-                    <li><a href="#partners">Partners</a></li>
+                <ul class="vertical large-horizontal dropdown menu" data-dropdown-menu>
+                    {% for item in site.data.pages %}
+                        <li class="{% if page.url contains item.url %}current{% endif %}">
+                            <a href="{{ item.url }}" alt="{{ item.title }}">{{ item.title }}</a>
+                            {% if item.children %}
+                                <ul class="menu">
+                                  {% for child in item.children %}
+                                    <li>
+                                        <a href="{{ child.url }}" alt="{{ child.title }}"
+                                           class="{% if page.url contains item.url %}current{% endif %}">
+                                            {{ child.title }}
+                                        </a>
+                                    </li>
+                                  {% endfor %}
+                                </ul>
+                            {% endif %}
+                        </li>
+                    {% endfor %}
                 </ul>
             </div>
 
