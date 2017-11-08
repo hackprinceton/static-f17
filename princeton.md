@@ -25,8 +25,7 @@ Register today at [my.hackprinceton.com](http://my.hackprinceton.com/).
 ### Host
 
 Hundreds of amazing student hackers are coming to campus. Even if you aren’t
-participating as a hacker, help us host students overnight for the weekend and
-receive a $10 Amazon gift card per hosted hacker!
+participating as a hacker, help us host students overnight for the weekend!
 
 Sign up at [hackprinceton.com/host](/host).
 
