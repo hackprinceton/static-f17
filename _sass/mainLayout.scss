@@ -45,6 +45,12 @@ div, button, p, li, input, a {
   .top-bar {
     padding: 0;
 
+    // Fit into screen on mobile
+    @include breakpoint(medium down) {
+      overflow: auto;
+      max-height: 90vh;
+    }
+
     img {
       height: 30px;
     }
