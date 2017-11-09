@@ -1,6 +1,6 @@
 <nav class="fixed-top full-width">
     <div class="title-bar" data-responsive-toggle="main-menu" data-hide-for="large">
-        <a href="#home"><img src="{{ "img/logo.svg" | prepend: site.baseurl }}?{{site.time | date: '%s%N'}}"></a>
+        <a href="/"><img src="{{ "img/logo.svg" | prepend: site.baseurl }}?{{site.time | date: '%s%N'}}"></a>
         <div class="float-right">
             <div class="title-bar-title" data-toggle="main-menu">Menu</div>
             <button class="menu-icon" type="button" data-toggle="main-menu"></button>
@@ -14,12 +14,12 @@
             </div>
 
             <div class="top-bar-left">
-                <ul class="vertical large-horizontal dropdown menu" data-dropdown-menu>
+                <ul class="vertical large-horizontal menu" data-responsive-menu="accordion large-dropdown">
                     {% for item in site.data.pages %}
                         <li class="{% if page.url contains item.url %}current{% endif %}">
-                            <a href="{{ item.url }}" alt="{{ item.title }}">{{ item.title }}</a>
+                            <a {% if item.url %}href="{{ item.url }}" alt="{{ item.title }}"{% endif %}>{{ item.title }}</a>
                             {% if item.children %}
-                                <ul class="menu">
+                                <ul class="vertical menu">
                                   {% for child in item.children %}
                                     <li>
                                         <a href="{{ child.url }}" alt="{{ child.title }}"

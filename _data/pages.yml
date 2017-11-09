@@ -1,13 +1,22 @@
 - title: Home
   url: /#home
-- title: About
-  url: /#about
 - title: FAQ
   url: /#faq
 - title: Partners
   url: /#partners
-- title: Guide
-  url: /guide
+- title: Schedule
+  url: /schedule
+- title: Logistics
   children:
-    - title: Travel
-      url: /travel
+  - title: Maps
+    url: /maps
+  - title: Travel / Buses
+    url: /travel
+  - title: Packing List
+    url: /packing-list
+  - title: Accomodations
+    url: /accomodations
+- title: Links
+  children:
+  - title: Slack
+    url: /slack
