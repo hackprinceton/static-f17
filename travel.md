@@ -51,28 +51,28 @@ will be posted here later.
         </tr>
         <tr>
             <td rowspan="3">Toronto-McMaster-Cornell</td>
-            <td>University of Toronto (31 King’s College Circle Toronto, ON M5S 1A1 (Convocation Hall)</td>
+            <td>University of Toronto (27 King’s College Circle Toronto, ON M5S 1A1 (Office of Convocation))</td>
             <td>6:00 AM</td>
             <td>2:00 AM</td>
         </tr>
         <tr>
-            <td>McMaster University (1309 Main St W, Hamilton, ON L8S 1C5 [Plaza of Williams/Gino’s right across from McMasMedical Centre])</td>
+            <td>McMaster University (1280 Main St W, Hamilton, ON L8S 4L8)</td>
             <td>7:30 AM</td>
             <td>1:00 AM</td>
         </tr>
         <tr>
-            <td>Cornell University</td>
+            <td>Cornell University (106 East Ave, Ithaca, NY 14853 (Sage Hall))</td>
             <td>12:00 PM</td>
             <td>8:30 PM</td>
         </tr>
         <tr>
             <td rowspan="2">Northeast</td>
-            <td>MIT</td>
+            <td>MIT (77 Massachusetts Ave., Cambridge, MA)</td>
             <td>11:00 AM</td>
             <td>9:30 PM</td>
         </tr>
         <tr>
-            <td>Yale University</td>
+            <td>Yale University (344 College St, New Haven, CT (Phelps Gate))</td>
             <td>1:45 PM</td>
             <td>7:00 PM</td>
         </tr>
