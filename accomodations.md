@@ -19,4 +19,4 @@ sleeping at the venue, you have three options:
 For the 3rd option: We can match you with a Princeton student host by request to 
 stay with overnight. You’ll need to bring your own sleeping bag or 
 air mattress, since you’ll likely be sharing floor space with other 
-participants. Sign up for a host at https://localhost.hackprinceton.com/.
+participants. Sign up for a host at [https://localhost.hackprinceton.com/](https://localhost.hackprinceton.com/).
