@@ -2,9 +2,25 @@
 layout: page
 ---
 
-## Travel Information
+# Travel and Buses
 
-### Location / Dates / Times
+## Overview
+
+*   Registration opens at 5:00pm on Friday, November 10 at the Friend Center. 
+    Make sure to bring your student ID for registration - we’ll include a 
+    reminder in the packing list.
+*   For public transit travel routes, see the travel page for tips on getting to 
+    campus by train.
+*   To join a charter bus waitlist, email 
+    [travel@hackprinceton.com](mailto:travel@hackprinceton.com).
+*   If you’re arriving by car, train, or plane, refer to our travel page for 
+    details about parking and getting to campus.
+*   If you were offered a travel subsidy on your dashboard, or if you paid a bus 
+    deposit, you must visit our travel booth on Saturday to claim reimbursement. 
+    Save your receipts and make sure to have a copy of them on-site. Details on 
+    the claim process are posted on the travel page.
+
+## Location / Dates / Times
 
 HackPrinceton registration and check-in will take place in the Friend Center
 ([map][friend-map]), at the northeast corner of campus. The building is
@@ -19,7 +35,7 @@ located at the following address:
 You should plan on arriving around 5-6pm on Friday, November 10th and leaving
 around 3pm on Sunday, November 12th.
 
-### Charter Buses
+## Charter Buses
 
 We will be sending charter buses out to help accommodate travel to and from
 certain schools. Since demand is high, spots on these buses will be available
@@ -28,7 +44,7 @@ those schools. Once at HackPrinceton, we will reimburse the cost of your
 ticket at our travel booth. After you purchase your ticket, the bus captain
 will reach out to you via email with further details within a couple of weeks.
 
-### Routes and Schedules
+## Routes and Schedules
 
 The schedule below is tentative and subject to change. Exact pickup locations
 will be posted here later.
@@ -88,7 +104,7 @@ come-first-serve basis.
 *   Toronto, McMaster, Cornell: [hackprincetonfall17-toronto.eventbrite.com](https://hackprincetonfall17-toronto.eventbrite.com)
 *   MIT, Yale: [hackprincetonfall17-northeast.eventbrite.com](https://hackprincetonfall17-northeast.eventbrite.com)
 
-### Bus FAQs
+## Bus FAQs
 
 **How will the deposit be refunded?**   We will refund participants on-site
 through our subsidy process. More details on how this works are in the
@@ -112,7 +128,7 @@ Yes, we will extend the confirmation deadline for anyone who accepts a spot off 
 **Can I reserve a ticket for someone else?**  
 Yes, but list the emails of your entire team when you reserve the tickets.
 
-### Travel Subsidies
+## Travel Subsidies
 
 If you applied for a travel reimbursement in your application, you may be
 eligible for a travel subsidy to help offset the cost of travel. The amount
@@ -147,7 +163,7 @@ reimbursement if you were assigned to a bus but took alternative travel.
 Travel subsidies are available on a limited basis, and thus we are unable to
 make adjustments except in extenuating circumstances.
 
-### Arriving by Car
+## Arriving by Car
 
 Please park in the North Garage ([map][north-garage]), located near Friend
 Center at the northeast corner of campus. If the garage is full, you may also
@@ -162,7 +178,7 @@ For a detailed parking map, go to
 [ivy-lane]: https://www.google.com/maps/place/Ivy+Ln,+Princeton,+NJ+08540/@40.3468904,-74.6534689,17z/data=!3m1!4b1!4m5!3m4!1s0x89c3e6db50e9019d:0x16bbf3a90b95e4f7!8m2!3d40.3468863!4d-74.6512802
 [lot-2]: https://www.google.com/maps/place/LOT+2,+Princeton,+NJ+08540/@40.3513276,-74.652064,17z/data=!3m1!4b1!4m5!3m4!1s0x89c3e6dd63c5f71f:0xdb4802c7455caa04!8m2!3d40.3512933!4d-74.6498327
 
-### Arriving by Plane
+## Arriving by Plane
 
 If you’re flying to HackPrinceton, we recommend arriving at one of these
 airports: Newark Liberty International Airport (EWR) or Philadelphia
@@ -171,7 +187,7 @@ International Airport (PHL).
 Both airports are connected by train to Princeton, with EWR being the closer
 of the two.
 
-### Arriving by Train
+## Arriving by Train
 
 The Princeton campus is serviced by an offshoot of the NJTransit Northeast
 Corridor train line. A train station (called the “Dinky”) is located at the
@@ -209,7 +225,7 @@ Station. At Princeton Junction, transfer to the “Dinky” train to continue to
 Princeton Station. Exact train times can be looked up on the NJTransit site or
 on Google Maps.
 
-### Additional Questions
+## Additional Questions
 
 If you have any additional questions about traveling to Princeton, feel free
 to reach out to our travel team at
