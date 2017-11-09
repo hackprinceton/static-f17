@@ -452,3 +452,9 @@
     }
   }
 }
+
+.dropdown {
+  a:not([href]) {
+    cursor: default;
+  }
+}
