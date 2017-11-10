@@ -46,9 +46,6 @@ will reach out to you via email with further details within a couple of weeks.
 
 ## Routes and Schedules
 
-The schedule below is tentative and subject to change. Exact pickup locations
-will be posted here later.
-
 <table class="unstriped">
     <thead>
         <tr>
