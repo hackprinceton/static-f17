@@ -26,5 +26,7 @@
   children:
   - title: Slack
     url: /slack
+  - title: Devpost
+    url: https://hackprinceton-fall17.devpost.com
   - title: First-Time Starter Kit
     url: https://starterkit.hackprinceton.com
