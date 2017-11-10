@@ -1,10 +1,12 @@
-- title: Partners
-  url: /#partners
-- title: FAQ
-  url: /#faq
-- title: Agenda
+- title: About
   children:
-  - title: Event Schedule
+  - title: Partners
+    url: /#partners
+  - title: FAQ
+    url: /#faq
+- title: Event
+  children:
+  - title: Schedule
     url: /schedule
   - title: Judges
     url: /judges
@@ -18,7 +20,7 @@
     url: /packing-list
   - title: Accomodations
     url: /accomodations
-- title: Links
+- title: Resources
   children:
   - title: Slack
     url: /slack
