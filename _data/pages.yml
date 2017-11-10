@@ -1,11 +1,13 @@
-- title: Home
-  url: /#home
-- title: FAQ
-  url: /#faq
 - title: Partners
   url: /#partners
-- title: Schedule
-  url: /schedule
+- title: FAQ
+  url: /#faq
+- title: Agenda
+  children:
+  - title: Event Schedule
+    url: /schedule
+  - title: Judges
+    url: /judges
 - title: Logistics
   children:
   - title: Maps
