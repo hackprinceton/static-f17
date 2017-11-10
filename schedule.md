@@ -1,3 +1,4 @@
 ---
-redirect_to: /dayof
+redirect_to: "/dayof"
 ---
+
