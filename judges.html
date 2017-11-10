@@ -1,0 +1,19 @@
+---
+layout: default
+title: Judges
+---
+
+<div class="template-page row columns">
+  <h1>Judges</h1>
+
+  <div class="judges-wrapper">
+    {% for judge in site.data.judges %}
+    <div class="judge">
+      <div class="judge__photo" style="background-image: url('/img/people/{{ judge.photo }}');"></div>
+      <div class="judge__name">{{ judge.name }}</div>
+      <div class="judge__title">{{ judge.title }}</div>
+      <div class="judge__bio">{{ judge.bio }}</div>
+    </div>
+    {% endfor %}
+  </div>
+</div>

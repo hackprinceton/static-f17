@@ -1,11 +1,15 @@
-- title: Home
-  url: /#home
-- title: FAQ
-  url: /#faq
-- title: Partners
-  url: /#partners
-- title: Schedule
-  url: /schedule
+- title: About
+  children:
+  - title: Partners
+    url: /#partners
+  - title: FAQ
+    url: /#faq
+- title: Event
+  children:
+  - title: Schedule
+    url: /schedule
+  - title: Judges
+    url: /judges
 - title: Logistics
   children:
   - title: Maps
@@ -16,7 +20,7 @@
     url: /packing-list
   - title: Accomodations
     url: /accomodations
-- title: Links
+- title: Resources
   children:
   - title: Slack
     url: /slack
