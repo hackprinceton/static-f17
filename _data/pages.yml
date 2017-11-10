@@ -1,3 +1,5 @@
+- title: Day-Of
+  url: /dayof
 - title: About
   children:
   - title: Partners
@@ -7,7 +9,7 @@
 - title: Event
   children:
   - title: Schedule
-    url: /schedule
+    url: /dayof
   - title: Speakers
     url: /speakers
   - title: Judges
