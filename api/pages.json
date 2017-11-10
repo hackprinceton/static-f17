@@ -6,6 +6,18 @@
     {
         "title": "{{ page.title }}",
         "url": "{{ page.url }}"
+        {% if page.children %}
+        ,
+        "children": [
+            {% for child in page.children %}
+                {
+                    "title": "{{ child.title }}",
+                    "url": "{{ child.url }}"
+                }
+                {% unless forloop.last %},{% endunless %}
+            {% endfor %}
+        ]
+        {% endif %}
     }
     {% unless forloop.last %},{% endunless %}
 {% endfor %}
