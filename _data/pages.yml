@@ -8,6 +8,8 @@
   children:
   - title: Schedule
     url: /schedule
+  - title: Speakers
+    url: /speakers
   - title: Judges
     url: /judges
 - title: Logistics

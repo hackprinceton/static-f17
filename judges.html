@@ -6,13 +6,13 @@ layout: default
 <div class="template-page row columns">
   <h1>Judges</h1>
 
-  <div class="judges-wrapper">
+  <div class="person__wrapper">
     {% for judge in site.data.judges %}
-    <div class="judge">
-      <div class="judge__photo" style="background-image: url('/img/people/{{ judge.photo }}');"></div>
-      <div class="judge__name">{{ judge.name }}</div>
-      <div class="judge__title">{{ judge.title }}</div>
-      <div class="judge__bio">{{ judge.bio }}</div>
+    <div class="person">
+      <div class="person__photo" style="background-image: url('/img/people/{{ judge.photo }}');"></div>
+      <div class="person__name">{{ judge.name }}</div>
+      <div class="person__title">{{ judge.title }}</div>
+      <div class="person__bio">{{ judge.bio }}</div>
     </div>
     {% endfor %}
   </div>

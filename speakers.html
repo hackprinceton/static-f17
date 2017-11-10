@@ -1,0 +1,19 @@
+---
+layout: default
+title: Speakers
+---
+
+<div class="template-page row columns">
+  <h1>Speakers</h1>
+
+  <div class="person__wrapper">
+    {% for speaker in site.data.speakers %}
+    <div class="person person--wide">
+      <div class="person__photo" style="background-image: url('/img/people/{{ speaker.photo }}');"></div>
+      <div class="person__name">{{ speaker.name }}</div>
+      <div class="person__title">{{ speaker.title }}</div>
+      <div class="person__bio">{{ speaker.bio }}</div>
+    </div>
+    {% endfor %}
+  </div>
+</div>

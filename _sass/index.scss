@@ -459,15 +459,19 @@
   }
 }
 
-.judges-wrapper {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.judge {
+.person {
   max-width: 250px;
   margin: 20px;
+
+  &--wide {
+    max-width: 350px;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 
   &__photo {
     width: 150px;
