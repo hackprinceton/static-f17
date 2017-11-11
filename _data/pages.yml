@@ -26,6 +26,8 @@
     url: /accomodations
 - title: Resources
   children:
+  - title: Mentorship
+    url: /mentorship
   - title: Slack
     url: /slack
   - title: Devpost
