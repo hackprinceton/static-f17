@@ -9,14 +9,17 @@ layout: default
     height: 100%;
     overflow: hidden;
   }
-  
-  .dayof-iframe {
-    overflow: auto;
-    -webkit-overflow-scrolling: touch;
-  }
 
   .main-wrapper > footer {
     display: none;
   }
 </style>
 <iframe class="dayof-iframe" src="https://hp-bebo-web.herokuapp.com/" frameborder="0"></iframe>
+<script>
+  // iOS doesn't scroll the iframe properly, so until we find a fix, just break out of the iframe
+  // https://stackoverflow.com/questions/9038625/detect-if-device-is-ios
+  var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+  if (iOS) {
+    window.location.replace('https://hp-bebo-web.herokuapp.com/');
+  }
+</script>
